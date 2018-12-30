@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    //Start: Smooth Scroll
+    function smoothScroll() {
+      document.querySelector('#main').scrollIntoView({ 
+        behavior: 'smooth'
+      });
+    }
+    //End: Smooth Scroll
+  </script>
+  <title>Kratos 2K19</title>
+</head>
+<body>
+  <div id="hero">
+    <div id="hero_left">
+      <img id="kratos_logo" src="images/kratos_logo.png" alt="Logo">
+    </div>
+    <div id="hero_right">
+      <div id="hero_right_wrapper">
+        <h1 id="hero_right_title">KRATOS 2K19</h1>
+        <div id="hero_right_subtitle">
+          <p id="hero_right_p" class="hero_right_el">Symposium by</p>
+          <h2 id="hero_right_dept" class="hero_right_el">Computer Science Department</h2>
+          <h2 id="hero_right_college" class="hero_right_el">Easwari Engineering College</h2>
+        </div>
+      </div>
+    </div>
+    <a onclick="smoothScroll()" id="scroll_arrow"></a>
+    
+  </div>
+  <div id="main">
+    <div id="top_bar">
+      <div id="top_bar_logo">
+          <img class="top_bar_logo_img" src="images/kratos_logo.png" alt="Logo">
+      </div>
+    </div>
+    <ul id="main_menu">
+      <li class="main_menu_item"><a href="#technical">Technical Events</a></li>
+      <li class="main_menu_item"><a href="#non_technical">Non-Technical Events</a></li>
+      <li class="main_menu_item"><a href="#">Map</a></li>
+      <li class="main_menu_item"><a href="#">Register</a></li>
+    </ul>
+  </div>
+  <div id="technical">
+    <div id="technical_title">
+      Technical Events
+    </div>
+  </div>
+  <div id="non_technical">
+
+  </div>
+  <script>
+  	//Start: Top Bar Visibility Toggle
+  	    // if (document.querySelector('#hero').scrollTop <= 50) {
+  	    //   alert("main reached");
+        //   console.log("main reached");
+        //   console.log(document.querySelector('#hero').scrollTop)
+  	    // }
+  	  //End: Top Bar Visibility Toggle
+      //test
+  </script>
+
+</body>
+</html> 
