@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!--[if lte IE 8]>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/base-min.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-min.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/base-min.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-min.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="css/style.css">
+  <title>Events | Kratos 19</title>
+</head>
+<body>
+  <div id="top_bar">
+
+    <div id="menuToggle">
+    
+      <input type="checkbox" />
+  
+      <span></span>
+      <span></span>
+      <span></span>
+  
+      <ul id="menu">
+        <a href="/index.html"><li>Home</li></a>
+        <a href="/index.html#about"><li>About</li></a>
+        <a href="/events.html"><li>Events</li></a>
+        <a href="#"><li>Contact</li></a>
+        <a href="#"><li>Map</li></a>
+      </ul>
+    </div>
+
+    <div id="top_bar_logo">
+        <a href="/index.html"><img class="top_bar_logo_img" src="images/kratos_logo.png" alt="Logo"></a>
+    </div>
+  </div>
+  <div id="events">
+    <div id="events_wrapper" class="pure-g">
+      <h2 class="pure-u-1 kfont page_title">Events</h2>
+      <div class="pure-u-1 pure-u-lg-1-2 events_item">
+        <div class="events_item_content">  
+            <h3 class="events_item_heading">Technical Events</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, consectetur, temporibus placeat modi saepe ipsam ab blanditiis nisi accusamus deleniti distinctio itaque, aspernatur omnis? A quo quae non aspernatur ad!</p>
+        </div>
+      </div>
+      <div class="pure-u-1 pure-u-lg-1-2 events_item">
+        <div class="events_item_content">
+            <h3 class="events_item_heading">Non-Technical Events</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, consectetur, temporibus placeat modi saepe ipsam ab blanditiis nisi accusamus deleniti distinctio itaque, aspernatur omnis? A quo quae non aspernatur ad!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="technical">
+    <div id="technical_wrapper"></div>
+  </div>
+  <div id="non_technical">
+    <div id="non_technical_wrapper"></div>
+  </div>
+  <script>
+    document.querySelectorAll('.events_item_content')[0].onclick = function () {
+      scrollTo(document.querySelector('#technical'), 0, 1250);
+      console.log(document.querySelector('#technical'));
+    }
+
+    document.querySelectorAll('.events_item_content')[1].onclick = function () {
+      scrollTo(document.querySelector('#non_technical'), 0, 1250);
+      console.log(document.querySelector('#non_technical'));
+    }
+
+    function scrollTo(element, to, duration) {
+      var start = element.scrollTop;
+      console.log(element.scrollTop);
+      
+      var change = to - start,
+          currentTime = 0,
+          increment = 20;
+
+      var animateScroll = function () {
+        currentTime += increment;
+        var val = Math.easeInOutQuad(currentTime, start, change, duration);
+        element.scrollTop = val;
+        if (currentTime < duration) {
+          setTimeout(animateScroll, increment);
+        }
+      };
+      animateScroll();
+    }
+
+    //t = current time
+    //b = start value
+    //c = change in value
+    //d = duration
+    Math.easeInOutQuad = function (t, b, c, d) {
+      t /= d / 2;
+      if (t < 1) return c / 2 * t * t + b;
+      t--;
+      return -c / 2 * (t * (t - 2) - 1) + b;
+    };
+  </script>
+
+</body>
+</html>
