@@ -1,3 +1,8 @@
+
+/*
+  Color Scheme : #7579ff, #ab56cf, #551DFC
+*/
+
 @font-face {
   font-family: "bitink";
   src: url("../fonts/bitink.ttf") format("truetype")
@@ -71,6 +76,10 @@ a {
   -webkit-user-select: none;
   user-select: none;
   transform: translateY(-50%);
+}
+
+.hero_left_menu {
+  display: none;
 }
 
 #menuToggle input
@@ -200,7 +209,7 @@ a {
   justify-content: center;
   align-items: center;
   clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
-  background: linear-gradient(60deg, rgb(171, 86, 207), rgb(117,121,255));
+  background: linear-gradient(60deg, rgb(171, 86, 207), #551DFC, rgb(117,121,255));
 }
 
 .hero_left_menu {
@@ -239,7 +248,7 @@ a {
 }
 
 #hero_right_nav li a:hover {
-  background: linear-gradient(0deg, rgb(171, 86, 207), rgb(117,121,255));
+  background: linear-gradient(0deg, rgb(171, 86, 207), #551DFC, rgb(117,121,255));
   background-clip: text;
   color: transparent;
   border-bottom: 2px solid rgb(171, 86, 207);
@@ -375,7 +384,7 @@ a {
 }
 
 .top_bar_logo_img {
-  width: 9vw;
+  width: 100px;
   margin-top: 25px;
   margin-bottom: 10px;
 }
@@ -431,7 +440,7 @@ a {
 }
 
 .events_item_content {
-  margin: 60px 100px 0;
+  margin: 60px auto 0;
   background-color: #551DFC;
   color: white;
   border-radius: 15px;
@@ -440,8 +449,6 @@ a {
   max-width: 455px;
 }
 
-
-
 .events_item_heading {
   padding: 50px 0;
   font-size: 1.5rem;
@@ -449,6 +456,33 @@ a {
 
 .events_item_content p {
   padding: 0 10px 50px;
+}
+
+#technical_events {
+  margin-top: 50px;
+}
+
+#technical_title {
+  font-size: 3.5rem;
+  text-align: center;
+  padding-top: 70px;
+}
+
+.event_item {
+  width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  background: #551DFC;
+  color: white;
+  margin: 50px auto;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+#second_row {
+  padding-left: 150px;
 }
 
 /* End: Events Section */
@@ -495,13 +529,28 @@ a {
 }
 /* End: Non-technical Section */
 
+#gmap {
+  margin-top: 200px;
+}
+
+.mapouter {
+  text-align:right;
+  height:648px;
+  width:100%;
+}
+  
+.gmap_canvas {
+  overflow:hidden;
+  background:none!important;
+  height:648px;
+  width:100%;
+}
+
 /* Start: Media Queries */
 
 @media screen and (max-width: 1280px) {
   
-  :root {
-    font-size: 14px;
-  }
+  
 
   #countdown {
     width: 390px;
@@ -511,9 +560,7 @@ a {
 }
 
 @media screen and (max-width:1024px) {
-  :root {
-    font-size: 12px;
-  }
+  
 
   #hero #hero_left .hero_left_menu {
     display: block;
