@@ -63,7 +63,7 @@ a {
 .page_title {
   text-align: center;
   margin-top: 12vw;
-  font-size: 3.5rem;
+  font-size: 3rem;
   letter-spacing: 5px;
   text-transform: uppercase;
 }
@@ -381,8 +381,7 @@ a {
   background: white;
   text-align: center;
   z-index: 9999;
-  filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.6));
-  box-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+  filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.2))
 }
 
 #top_bar_logo {
@@ -443,12 +442,13 @@ a {
 /* Start: Sponsers Section */
 
 #sponsors {
-  padding: 0 50px;
+  padding: 100px 50px 0;
 }
 
 #sponsors_title {
   text-align: center;
   margin: 60px 0 40px;
+  font-size: 3rem;
 }
 
 #sponsors a {
@@ -524,6 +524,9 @@ a {
 
 #technical_events {
   margin-top: 50px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #technical_events > div {
