@@ -40,6 +40,8 @@
           <a href="/events.html"><li>Events</li></a>
           <a href="#"><li>Contact</li></a>
           <a href="#"><li>Map</li></a>
+          <a href="/register.html"><li>Register</li></a>
+          
         </ul>
       </div>
       <div id="hero_left_wrapper">
@@ -58,7 +60,7 @@
         <div id="countdown"></div> 
         <h1 id="hero_right_title">KRATOS 19</h1>
         <div id="hero_right_register">
-          <a id="hero_right_register_link" href="#">REGISTER</a>
+          <a id="hero_right_register_link" href="/register.html">REGISTER</a>
         </div>
         <div id="hero_right_subtitle">
           <p id="hero_right_p" class="hero_right_el">Symposium by</p>
@@ -132,7 +134,7 @@
       var now = new Date().getTime(); 
       var t = deadline - now; 
       var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
-      var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+      var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); 
       var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
       var seconds = Math.floor((t % (1000 * 60)) / 1000); 
       document.getElementById("countdown").innerHTML = days + "D "  
