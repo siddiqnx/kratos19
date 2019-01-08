@@ -347,21 +347,33 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100vh;
+  height: 100%;
 }
 
 #countdown {
+    position: relative;
     margin-top: -100px;
     margin-bottom: 71px;
     font-size: 2.5rem;
     line-height: 50px;
     font-weight: bold;
+    background: white;
     color: rgb(171, 86, 207);
-    padding: 30px;
-    border: 6px solid rgb(171, 86, 207);
+    padding: 30px 35px;
     border-radius: 30px;
-    width: 530px;
-    text-align: center;
+    text-align: left;
+}
+
+#countdown::after {
+  content: '';
+  width: 94%;
+  height: 45px;
+  position: absolute;
+  box-shadow: 0 0 45px -5px rgba(0,0,0,0.5);
+  z-index: -1;
+  top: 50%;
+  transform: translateY(-50%) rotateZ(-4deg);
+  left: 15px;
 }
 
 #hero_right_title {
@@ -406,20 +418,27 @@ a {
 #hero_right_subtitle {
   position: absolute;
   bottom: 50px;
+  color: #3c3c3c;
 }
 
 #hero_right_p {
-  opacity: 0.7;
 }
 
 #hero_right_dept {
-  font-size: 1.5rem;
   font-weight: 400;
 }
 
 #hero_right_college {
-  font-size: 1.5rem;
   font-weight: 400;
+}
+
+@keyframes scroll_arrow_bounce {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-10px);
+  }
 }
 
 #scroll_arrow {
@@ -432,6 +451,8 @@ a {
   background-size: 40px;
   width: 40px;
   height: 40px;
+  animation: scroll_arrow_bounce 1s ease-in-out infinite;
+  animation-direction: alternate;
 }
 
 /* End: Hero Section */
@@ -593,6 +614,8 @@ a {
   margin-top: 0;
 }
 
+/* End: Hamburger Menu */
+
 #main_wrapper {
   width: 95%;
   background: linear-gradient(60deg, rgba(171, 86, 207, 0.8), rgba(85,29,252,0.8), rgba(117,121,255,0.8)),url(../images/main_bg.jpg);
@@ -601,6 +624,7 @@ a {
           box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.4);
   border-radius: 15px;
   margin: 30px 0;
+  background-position: center;
 }
 
 #about {
@@ -620,7 +644,6 @@ a {
   min-height: 90vh;
   color: #f7f7f7;
   padding: 0 200px;
-  margin-top: 100px;
 }
 
 .about_item {
@@ -644,6 +667,99 @@ a {
 }
 
 /* End: Main Section */
+
+/* Start: Register Section */
+
+#register {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.register_title {
+  text-align: center;
+  margin: 60px 0 40px;   
+  font-size: 3rem;
+  color: white;
+}
+
+#register_wrapper {
+  background: linear-gradient(60deg, rgb(171, 86, 207), rgb(85,29,252) 20%, rgb(117,121,255));
+  -webkit-box-shadow: 2px 4px 8px 0 rgba(46,61,73,.2);
+          box-shadow: 2px 4px 8px 0 rgba(46,61,73,.2);
+  padding: 100px 0px;
+  text-align: center;
+  width: 100%;
+}
+
+#register_form {
+  color: white;
+  display: inline-block;
+  text-align: left;
+}
+
+#register_form > label {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+#register_form > input[type="text"] {
+  display: block;
+  width: 300px;
+  height: 41px;
+  background: rgb(71, 22, 218);
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#register_form > input[type="text"]::placeholder {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+#register_form > input[type="submit"]{
+  display: block;
+  background: linear-gradient(60deg, rgb(171, 86, 207), rgb(117,121,255));
+  padding: 10px 19px;
+  text-align: center;
+  border: none;
+  margin: 0 auto;
+  margin-top: 0px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  color: white;
+  cursor: pointer;
+  margin-top: 45px;
+  transition: transform .5s ease-in-out;
+}
+
+#register_form > input[type="submit"]:hover {
+  transform: translateY(5px);
+}
+/* End: Register Section */
+
 
 /* Start: Sponsers Section */
 
@@ -752,6 +868,7 @@ a {
 .events_item_heading {
   padding: 30px 0 20px;
   font-size: 2rem;
+  text-transform: uppercase;
 }
 
 .events_item_p {
@@ -859,10 +976,10 @@ a {
   
 }
 
-
 /* End: Technical Section */
 
 /* Start: Non-technical Section */
+
 #non_technical {
   width: 100%;
   height: 100vh;
@@ -891,57 +1008,9 @@ a {
 
 /* End: Non-technical Section */
 
-/* Start: Register Section */
-
-
-#register {
-  width: 100%;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#register_wrapper {
-  width: 500px;
-  background: #f7f7f7; 
-  background-size: cover;
-  position: relative;
-  -webkit-box-shadow: 2px 4px 8px 0 rgba(46,61,73,.2);
-          box-shadow: 2px 4px 8px 0 rgba(46,61,73,.2);
-  border-radius: 15px;
-  padding: 100px 50px;
-}
-
-#register_form > label {
-  float: left;
-}
-
-#register_form > input[type="text"] {
-  float: right;
-}
-
-#register_form > *[type="submit"]{
-  all: unset;
-}
-
-/* End: Register Section */
-
 /* Start: Media Queries */
 
 @media screen and (max-width: 1280px) {
-  
-  
-
-  #countdown {
-    width: 390px;
-  }
 
   #about {
     padding: 0 30px;
@@ -950,7 +1019,6 @@ a {
 
 @media screen and (max-width:1024px) {
   
-
   #hero #hero_left .hero_left_menu {
     display: block;
     top: 60px;
@@ -965,15 +1033,9 @@ a {
     font-size: .9rem;
   }
 
-  #countdown {
-    width: 370px;
-  }
-
   #hero_right_title {
     font-size: 4rem;
-  }
-
-  
+  }  
 }
 
 @media screen and (max-width: 767px) {
@@ -1002,28 +1064,38 @@ a {
 
   #hero_left {
     width: 100%;
-    height: 30vh;
+    height: 25vh;
+    filter: none;
+  }
+
+  #hero_left img {
+    width: 140px;
   }
 
   #hero_right {
     width: 100%;
-    height: 70vh;
+    height: 75vh;
   }
 
   #hero_left_wrapper {
     -webkit-clip-path: none;
             clip-path: none;
     width: 100%;
-    height: 30vh;
+    height: 100%;
+    box-shadow: 0px 0px 20px -3px rgba(0,0,0,0.6);
   }
 
+  #hero_right_wrapper {
+    height: 100%;
+  }
   #hero_right_title {
     margin-top: -50px;
   }
 
-  #hero_right_subtitle {
+  #hero_right_subtitle h2 {
     bottom: 50px;
     line-height: 1;
+    font-size: 1rem;
   }
   #hero_right_register_link {
     margin-top:-15px;
@@ -1036,6 +1108,7 @@ a {
             flex-direction: column;
     
     padding: 0;
+    margin-top: 60px;
   }
 
   .about_content, .about_title {
@@ -1051,6 +1124,14 @@ a {
 @media screen and (max-width: 479px) {
   .events_item_content {
     margin: 60px 60px 0px;
+  }
+
+  #countdown {
+    font-size: 1.5rem;
+  }
+
+  #hero_right_title {
+    font-size: 3rem;
   }
 }
 
