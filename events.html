@@ -5,42 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   
-  <!--[if lte IE 8]>
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-min.css">
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
-  <![endif]-->
-  <!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-min.css">
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
-  <!--<![endif]-->
-
+  <link rel="stylesheet" href="css/puregrid.css">
   <link rel="stylesheet" href="css/style.css">
+
   <title>Events | Kratos 19</title>
 </head>
 <body>
   <div id="top_bar">
 
-    <div id="menuToggle">
-    
-      <input type="checkbox"/>
-  
-      <span></span>
-      <span></span>
-      <span></span>
-  
-      <ul id="menu">
-        <a href="/index.html"><li>Home</li></a>
-        <a href="/index.html#main"><li>About</li></a>
-        <a href="/events.html"><li>Events</li></a>
-        <a href="#"><li>Contact</li></a>
-        <a href="#"><li>Map</li></a>
-        <a href="/register.html"><li>Register</li></a>
-      </ul>
+    <div id="top_bar_logo">
+      <a href="/index.html">
+        <img class="top_bar_logo_img" src="images/kratos_logo.png" alt="Logo"><h1 id="top_bar_title" class="spcl_font">KRATOS 19</h1>
+      </a>
     </div>
 
-    <div id="top_bar_logo">
-        <a href="/index.html"><img class="top_bar_logo_img" src="images/kratos_logo.png" alt="Logo"></a>
+    <div id="top_bar_nav">
+      <ul id="right_nav">
+        <li class="nav_item"><a href="/events.html">Events</a></li>
+        <li class="nav_item"><a href="/index.html#main">About Us</a></li>
+        <li class="nav_item"><a href="/index.html#sponsors">Sponsors</a></li>
+        <li class="nav_item"><a href="#">Contact Us</a></li>
+        <li class="nav_item"><a href="/index.html#gmap">Map</a></li>
+      </ul>
     </div>
+    <div class="nav-toggle">
+      <div class="nav-toggle-bar"></div>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/index.html#main">About Us</a></li>
+        <li><a href="/events.html">Events</a></li>
+        <li><a href="#">Sponsors</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="/index.html#gmap">Map</a></li>
+        <li><a href="#">Register</a></li>
+      </ul>
+    </nav>
   </div>
   <div id="events">
     <div id="events_wrapper" class="pure-g">
@@ -115,5 +116,25 @@
     <div id="non_technical_wrapper"></div>
   </div>
 
+  <script src="js/app.js"></script>
+  <script>
+    (function () {
+
+        var hamburger = {
+          navToggle: document.querySelector('.nav-toggle'),
+          nav: document.querySelector('nav'),
+
+          doToggle: function (e) {
+            e.preventDefault();
+            this.navToggle.classList.toggle('expanded');
+            this.nav.classList.toggle('expanded');
+          }
+        };
+
+        hamburger.navToggle.addEventListener('click', function (e) { hamburger.doToggle(e); });
+        
+
+      }());
+  </script>
 </body>
 </html>
