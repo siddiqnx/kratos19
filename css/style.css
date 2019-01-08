@@ -75,171 +75,16 @@ a {
 
 /* End: Supporting Classes */
 
-/* Start: Hamburger Menu */
-#menu a
-{
-  text-decoration: none;
-  color: #232323;
-  
-  -webkit-transition: color 0.3s ease;
-  
-  transition: color 0.3s ease;
-}
+/* Start: Preloader */
 
-#menu a:hover
-{
-  color: tomato;
-}
-
-#menuToggle
-{
-  display:none;
-  position: absolute;
-  top: 50%;
-  left: 50px;
-  width:33px;
-  z-index: 999;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-.hero_left_menu {
-  display: none;
-}
-
-#menuToggle input
-{
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-  
-  cursor: pointer;
-  
-  opacity: 0; 
-  z-index: 2; 
-  
-  -webkit-touch-callout: none;
-}
-
-#menuToggle span
-{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  
-  background: #7579ff;
-  border-radius: 3px;
-  
-  z-index: 1;
-  
-  -webkit-transform-origin: 4px 0px;
-  
-          transform-origin: 4px 0px;
-  
-  -webkit-transition: background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease,
-              -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-  
-  transition: background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease,
-              -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease,
-              -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
-#menuToggle span:first-child
-{
-  -webkit-transform-origin: 0% 0%;
-          transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2)
-{
-  -webkit-transform-origin: 0% 100%;
-          transform-origin: 0% 100%;
-}
-
-#menuToggle input:checked ~ span
-{
-  opacity: 1;
-  -webkit-transform: rotate(45deg) translate(-2px, -1px);
-          transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
-}
-
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
-          transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  -webkit-transform: rotate(-45deg) translate(0, -1px);
-          transform: rotate(-45deg) translate(0, -1px);
-}
-
-#menu
-{
-  position: absolute;
-  width: 300px;
+#preload_overlay {
+  z-index: 99999;
+  width: 100%;
   height: 100vh;
-  margin: -74px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  
-  background: #ededed;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-  
-  -webkit-transform-origin: 0% 0%;
-  
-          transform-origin: 0% 0%;
-  -webkit-transform: translate(-100%, 0);
-          transform: translate(-100%, 0);
-  
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-  
-  transition: -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  background: yellow;
 }
 
-#menu li
-{
-  padding: 10px 0;
-  font-size: 22px;
-}
-
-/*
-* And let's slide it in from the left
-*/
-#menuToggle input:checked ~ ul
-{
-  -webkit-transform: none;
-          transform: none;
-}
-
-/* End: Hamburger Menu */
+/* Start: Preloader */
 
 /* Start: Hero Section */
 
@@ -752,14 +597,14 @@ a {
   color: white;
   cursor: pointer;
   margin-top: 45px;
-  transition: transform .5s ease-in-out;
+  transition: transform .3s ease-in-out, box-shadow .5s ease-in-out;
 }
 
 #register_form > input[type="submit"]:hover {
   transform: translateY(5px);
+  box-shadow: none;
 }
 /* End: Register Section */
-
 
 /* Start: Sponsers Section */
 
