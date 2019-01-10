@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/puregrid.css">
+  <link rel="stylesheet" href="css/style.css">
+  
 
   <script>
     //Start: Smooth Scroll
@@ -41,16 +42,20 @@
           attributeName="transform" type="translate"
           values="0 0; 0 20; 0 0"
           begin="0.4s" dur="0.6s" repeatCount="indefinite" />
-      </rect>
+      </rect>9
   </svg>
     <script>
       var overlay = document.querySelector('#preload_overlay');
       var body = document.body;
       body.style.overflow = "hidden";
-      window.addEventListener('load', function() {
-        overlay.style.display = "none";
-        body.style.overflow = "auto";
-      });
+      document.onreadystatechange = function() {
+        console.log('State changed', document.readyState);
+        if(document.readyState === "complete") 
+        {
+          overlay.style.display = "none";
+          body.style.overflow = "auto";  
+        }
+      }
     </script>
   </div>
   <div id="hero">
@@ -89,7 +94,7 @@
         </div>
         <div id="hero_right_subtitle">
           <p id="hero_right_p" class="hero_right_el">Symposium by</p>
-          <h2 id="hero_right_dept" class="hero_right_el">Computer Science Department</h2>
+          <h2 id="hero_right_dept" class="hero_right_el">The Department of CSE</h2>
           <h2 id="hero_right_college" class="hero_right_el">Easwari Engineering College</h2>
         </div>
       </div>
@@ -116,7 +121,7 @@
 
   <div id="register">
     <div id="register_wrapper">
-      <h2 class="register_title spcl_font">REGISTER</h2>
+      <h2 class="register_title">REGISTER</h2>
       <form id="register_form" action="#">
         <label for="name">Name</label>
         <input type="text" name="user_name" id="name"  placeholder="Enter your name here...">
@@ -130,7 +135,7 @@
   </div>
 
   <div id="sponsors" class="pure-g">
-    <h2 id="sponsors_title" class="pure-u-1 spcl_font">SPONSORS</h2>
+    <h2 id="sponsors_title" class="pure-u-1">SPONSORS</h2>
     <a href="#" class="pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-4"><img src="images/sponsor1_logo.png" alt=""></a>
     <a href="#" class="pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-4"><img src="images/sponsor1_logo.png" alt=""></a>
     <a href="#" class="pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-4"><img src="images/sponsor1_logo.png" alt=""></a>
@@ -149,7 +154,33 @@
   </div>
 
   <div id="footer">
-
+    <div id="footer_social">
+      <a href="https://www.facebook.com/Kratos2k19" target="_blank"><img src="./images/social_fb.png" alt="FB" class="footer_social_icon"></a>
+      <a href="https://www.instagram.com/kratos2k19" target="_blank"><img src="./images/social_instagram.png" alt="IG" class="footer_social_icon"></a>
+      <a href="https://twitter.com/kratos2k19" target="_blank"><img src="./images/social_twitter.png" alt="TW" class="footer_social_icon"></a>
+    </div>
+    <div id="footer_bottom">
+      <div id="footer_nav">
+        <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./index.html#main">About Us</a></li>
+        <li><a href="./events.html">Events</a></li>
+        <li><a href="./index.html#sponsors">Sponsors</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="./index.html#gmap">Map</a></li>
+        <li><a href="./index.html#register">Register</a></li>
+        </ul>
+      </div>
+      <div id="footer_contact">
+        <h2>Contact</h2>
+        <ul id="footer_contact_list">
+          <li class="footer_contact_list_item">Ashwin <span>+91 9523483922</span> </li>
+          <li class="footer_contact_list_item"></li>
+          <li class="footer_contact_list_item">Email: kratoshelpdesk@gmail.com</li>
+        </ul>
+      </div>
+      <span id="footer_copyright">Copyright © | Easwari Engineering College</span>
+    </div>
   </div>
   <script>
       var deadline = new Date("Feb 13, 2019 15:37:25").getTime(); 
