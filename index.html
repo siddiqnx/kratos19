@@ -44,19 +44,19 @@
           begin="0.4s" dur="0.6s" repeatCount="indefinite" />
       </rect>9
   </svg>
-    <script>
-      var overlay = document.querySelector('#preload_overlay');
-      var body = document.body;
-      body.style.overflow = "hidden";
-      document.onreadystatechange = function() {
-        console.log('State changed', document.readyState);
-        if(document.readyState === "complete") 
-        {
-          overlay.style.display = "none";
-          body.style.overflow = "auto";  
-        }
+  <script>
+    var overlay = document.querySelector('#preload_overlay');
+    var body = document.body;
+    body.style.overflow = "hidden";
+    document.onreadystatechange = function() {
+      console.log('State changed', document.readyState);
+      if(document.readyState === "complete") 
+      {
+        overlay.style.display = "none";
+        body.style.overflow = "auto";  
       }
-    </script>
+    }
+  </script>
   </div>
   <div id="hero">
     <div id="hero_left">
@@ -69,7 +69,7 @@
           <li><a href="./index.html#main">About Us</a></li>
           <li><a href="./events.html">Events</a></li>
           <li><a href="./index.html#sponsors">Sponsors</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="./index.html#footer">Contact Us</a></li>
           <li><a href="./index.html#gmap">Map</a></li>
           <li><a href="./index.html#register">Register</a></li>
         </ul>
@@ -83,7 +83,7 @@
           <li class="nav_item"><a href="/events.html">Events</a></li>
           <li class="nav_item"><a href="/index.html#main">About Us</a></li>
           <li class="nav_item"><a href="/index.html#sponsors">Sponsors</a></li>
-          <li class="nav_item"><a href="#">Contact Us</a></li>
+          <li class="nav_item"><a href="./index.html#footer">Contact Us</a></li>
           <li class="nav_item"><a href="/index.html#gmap">Map</a></li>
       </ul>
       <div id="hero_right_wrapper">
@@ -124,11 +124,13 @@
       <h2 class="register_title">REGISTER</h2>
       <form id="register_form" action="#">
         <label for="name">Name</label>
-        <input type="text" name="user_name" id="name"  placeholder="Enter your name here...">
+        <input type="text" name="user_name" id="name"  placeholder="Enter your Name">
+        <label for="email">Email ID</label>
+        <input type="text" name="user_email" id="email"  placeholder="Enter your Email ID">
         <label for="phno">Phone Number</label>
-        <input type="text" name="user_phno" id="phno"  placeholder="Enter your phone number here...">
+        <input type="text" name="user_phno" id="phno"  placeholder="Enter your Phone Number">
         <label for="college">College</label>
-        <input type="text" name="user_college" id="college" placeholder="Enter your college here...">
+        <input type="text" name="user_college" id="college" placeholder="Enter your College">
         <input type="submit" value="Register">
       </form>
     </div>
@@ -172,11 +174,12 @@
         </ul>
       </div>
       <div id="footer_contact">
-        <h2>Contact</h2>
+        <h2>Get in Touch</h2>
         <ul id="footer_contact_list">
-          <li class="footer_contact_list_item">Ashwin <span>+91 9523483922</span> </li>
+          <li class="footer_contact_list_item"><span class="post">President</span> <br> Ashwin Suganthan <span class="number">+91 877 894 0437</span> </li>
+          <li class="footer_contact_list_item"><span class="post">Vice President</span> <br> Sivachandran <span class="number">+91 979 052 4703</span> </li>
           <li class="footer_contact_list_item"></li>
-          <li class="footer_contact_list_item">Email: kratoshelpdesk@gmail.com</li>
+          <li class="footer_contact_list_item"><span class="post">Email</span> <br> <span>kratoshelpdesk@gmail.com</span></li>
         </ul>
       </div>
       <span id="footer_copyright">Copyright © | Easwari Engineering College</span>
