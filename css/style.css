@@ -690,8 +690,6 @@ h2, h3 {
   background: url("../images/events_bg.svg");
   background-size: cover;
   position: relative;
-  -webkit-box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.4);
   background-attachment: fixed;
   padding-bottom: 50px;
 }
@@ -782,7 +780,7 @@ h2, h3 {
 }
 
 .event_item {
-  width: 220px;
+  width: 275px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -861,7 +859,6 @@ h2, h3 {
   background-size: cover;
   position: relative;
   background-attachment: fixed;
-  
 }
 
 /* End: Technical Section */
@@ -1007,7 +1004,7 @@ h2, h3 {
 
   #hero_right_title {
     font-size: 4rem;
-  }  
+  }
 }
 
 @media screen and (max-width: 767px) {
