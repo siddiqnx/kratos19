@@ -11,36 +11,7 @@
   <title>Events | Kratos 19</title> 
 </head>
 <body>
-
-  <div id="preload_overlay">
-    <svg version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
-      <rect fill="#551DFC" x="25" y="25" width="10" height="50">
-        <animateTransform attributeType="XML" attributeName="transform" type="translate" values="0 0; 0 20; 0 0" begin="0" dur="0.6s" repeatCount="indefinite" />
-      </rect>
-      <rect fill="#551DFC" width="10" height="50" x="45" y="25">
-        <animateTransform attributeType="XML" attributeName="transform" type="translate" values="0 0; 0 20; 0 0" begin="0.2s" dur="0.6s" repeatCount="indefinite" />
-      </rect>
-      <rect fill="#551DFC" width="10" height="50" x="65" y="25">
-        <animateTransform attributeType="XML" attributeName="transform" type="translate" values="0 0; 0 20; 0 0" begin="0.4s" dur="0.6s" repeatCount="indefinite" />
-      </rect>
-    </svg>
-  <script>
-      var overlay = document.querySelector('#preload_overlay');
-      var body = document.body;
-      body.style.overflow = "hidden";
-      document.onreadystatechange = function() {
-        console.log('State changed', document.readyState);
-        if(document.readyState === "complete") 
-        {
-          overlay.style.display = "none";
-          body.style.overflow = "auto";  
-        }
-      }
-    </script>
-  </div>
-
   <div id="top_bar">
-
     <div id="top_bar_logo">
       <a href="/index.html">
         <img class="top_bar_logo_img" src="images/kratos_logo.png" alt="Logo">
@@ -72,7 +43,27 @@
       </ul>
     </nav>
   </div>
-
+  <div id="event_description" aria-hidden="true">
+    <div>
+      <img id="event_desc_close" src="./images/cancel.svg" width="25" height="25" alt="close">      
+    </div>
+    <p id="event_desc_title" class="event_sub_title">Paper Presentation</p>
+    <p>Time: <span id="event_desc_time">10:00 AM</span></p>
+    <p class="event_sub_title">Description</p>
+    <p id="event_desc_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+    <p class="event_sub_title">Rules</p>
+    <ul id="event_desc_rules">
+      <li>Mi proin sed libero enim sed faucibus turpis in</li>
+      <li>Mi proin sed libero enim sed faucibus turpis in</li>
+      <li>Elementum pulvinar etiam non quam lacus suspendisse</li>
+      <li>Elementum pulvinar etiam non quam lacus suspendisse</li>
+    </ul>
+    <p class="event_sub_title">Contact</p>
+    <p>
+      <span id="event_head_name">Surya Elavazhagan</span>
+      <span id="event_head_phone">+91 9840363615</span>
+    </p>
+  </div>
   <div id="events">
     <div id="events_wrapper">
       <div class="event_section_title">
@@ -273,43 +264,29 @@
         <span id="footer_copyright">Copyright © | Easwari Engineering College</span>
       </div>
     </div>
-  <script src="js/app.js"></script>
-  <script>
-    (function () {
-
-        var hamburger = {
-          navToggle: document.querySelector('.nav-toggle'),
-          nav: document.querySelector('nav'),
-
-          doToggle: function (e) {
-            e.preventDefault();
-            this.navToggle.classList.toggle('expanded');
-            this.nav.classList.toggle('expanded');
-          }
-        };
-
-        hamburger.navToggle.addEventListener('click', function (e) { hamburger.doToggle(e); });
-        
-
-      }());
-  </script>
-
-  <!-- Start: Parallax Script -->
-  <!-- <script>
-    function parallax() {
-      var slider = document.querySelectorAll(".slider"), i;
-      for(i = 2; i < slider.length; i++) {
-          var yPos = window.pageYOffset / slider[i].dataset.speed;
-          yPos = -yPos;
-          var coords = '0% '+ yPos + 'px';
-          slider[i].style.backgroundPosition = coords;
-    }
-    }
-    window.addEventListener("scroll", function(){
-      parallax();	
-    });
-  </script> -->
-    <!-- End: Parallax Script -->
     
+    <script>
+    (function () {
+      var hamburger = {
+        navToggle: document.querySelector('.nav-toggle'),
+        nav: document.querySelector('nav'),
+
+        doToggle: function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          this.navToggle.classList.toggle('expanded');
+          this.nav.classList.toggle('expanded');
+        }
+      };
+      hamburger.navToggle.addEventListener('click', function (e) { hamburger.doToggle(e); });
+      document.addEventListener('click', function(e) {
+        const navBar = document.querySelector('.nav');
+        if(e.target !== navBar && e.target !== hamburger.navToggle && navBar.classList.contains('expanded')) {
+          hamburger.doToggle(e);
+        }
+      });
+    }());
+    </script>
+    <script src="js/app.js"></script>
 </body>
 </html>
