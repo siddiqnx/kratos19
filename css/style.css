@@ -387,7 +387,6 @@ h2.hero_right_el {
 #top_bar_title {
   text-transform: uppercase;
   display: inline-block;
-  float: left;
   height: 100%;
   padding: 17px 20px;
   background: linear-gradient(60deg, rgba(171, 86, 207, 0.8), rgba(85,29,252,0.8), rgba(117,121,255,0.8));
@@ -855,6 +854,27 @@ h2.hero_right_el {
   padding-left: 150px;
 }
 
+.quote_space {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote_space h3 {
+  margin: 35px 25px;
+  font-weight: normal;
+  font-style: italic;
+  text-align: center;
+  padding: 20px 0;
+  color: transparent;
+  border-top: 2px solid #551DFC;
+  border-bottom: 2px solid #551DFC;
+  background: linear-gradient(90deg, rgb(171, 86, 207), rgb(85,29,252) , rgb(117,121,255));
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+}
+
 /* End: Events Section */
 
 /* Start: Technical Section */
@@ -1017,7 +1037,7 @@ h2.hero_right_el {
 }
 
 
-/* Start: Online Section */
+/* End: Online Section */
 
 /* Start: Footer Section */
 
