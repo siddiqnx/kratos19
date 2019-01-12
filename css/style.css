@@ -51,6 +51,11 @@ a {
   text-decoration: none;
 }
 
+br {
+  display: block;
+  margin: 6px 0;
+}
+
 /* Start: Reset*/
 
 .pure-g [class*="pure-u"] {
@@ -1270,6 +1275,11 @@ h2.hero_right_el {
     display: none;
   }
 
+  #main_wrapper {
+    width: 100%;
+    border-radius: 0;
+  }
+
   #footer_bottom {
     flex-direction: column;
   }
@@ -1301,7 +1311,6 @@ h2.hero_right_el {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(60deg, rgba(171, 86, 207, 1), rgba(85,29,252,1), rgba(117,121,255,1));
   padding: 10px;
   box-sizing: border-box;
   color: white;

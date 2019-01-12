@@ -68,7 +68,7 @@
   </div>
 
   <div id="main">
-    <div id="main_wrapper" class="slider" data-speed="3">
+    <div id="main_wrapper">
       <div id="about">
         <div class="about_item">
           <h2 class="about_title">ABOUT OUR DEPARTMENT</h2>
@@ -77,7 +77,9 @@
         <span class="about_border"></span>
         <div class="about_item">
           <h2 class="about_title">ABOUT KRATOS 19</h2>
-          <p class="about_content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam corporis cum iure aspernatur accusamus quam, dignissimos distinctio ex, eaque tempore explicabo accusantium expedita minima sequi dolorum est quis at laudantium! <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur veniam cupiditate id nulla corporis et deserunt dignissimos nesciunt voluptas accusamus, dolores assumenda placeat error magni? Rem neque odit minus dolor!</p>
+          <p class="about_content">
+            KRATOS is the brainchild of the department of CSE in its efforts to bring a change in the way we view computer science. <br> Bright ideas and new concepts that reinforce and recalibrate the way in which we see and learn from the world .It is a long-standing tradition of our department to invite the budding minds of the student community to our grand event, Kratos’19. <br> Here you can code your way to victory, solve a crime, breakout from prison and much more. So join us on our quest, gear up and let the games begin.
+           </p>
         </div>
       </div>
     </div>
@@ -189,23 +191,5 @@
     }());
   </script>
 
-  <!-- Start: Parallax Script -->
-  <script>
-    function parallax() {
-      var slider = document.querySelector(".slider");
-
-      var yPos = window.pageYOffset / slider.dataset.speed;
-      yPos = -yPos;
-      
-      var coords = '0% '+ yPos + 'px';
-      
-      slider.style.backgroundPosition = coords;
-    }
-
-    window.addEventListener("scroll", function(){
-      parallax();	
-    });
-  </script>
-    <!-- End: Parallax Script -->
 </body>
 </html> 
