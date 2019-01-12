@@ -22,42 +22,6 @@
   <title>Kratos 19</title>
 </head>
 <body>
-  <div id="preload_overlay">
-      <svg version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-    viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
-      <rect x="20" y="50" width="4" height="20" fill="#551DFC">
-        <animateTransform attributeType="XML"
-          attributeName="transform" type="translate"
-          values="0 0; 0 20; 0 0"
-          begin="0" dur="0.6s" repeatCount="indefinite" />
-      </rect>
-      <rect x="30" y="50" width="4" height="20" fill="#551DFC">
-        <animateTransform attributeType="XML"
-          attributeName="transform" type="translate"
-          values="0 0; 0 20; 0 0"
-          begin="0.2s" dur="0.6s" repeatCount="indefinite" />
-      </rect>
-      <rect x="40" y="50" width="4" height="20" fill="#551DFC">
-        <animateTransform attributeType="XML"
-          attributeName="transform" type="translate"
-          values="0 0; 0 20; 0 0"
-          begin="0.4s" dur="0.6s" repeatCount="indefinite" />
-      </rect>9
-  </svg>
-  <script>
-    var overlay = document.querySelector('#preload_overlay');
-    var body = document.body;
-    body.style.overflow = "hidden";
-    document.onreadystatechange = function() {
-      console.log('State changed', document.readyState);
-      if(document.readyState === "complete") 
-      {
-        overlay.style.display = "none";
-        body.style.overflow = "auto";  
-      }
-    }
-  </script>
-  </div>
   <div id="hero">
     <div id="hero_left">
       <div class="nav-toggle">
@@ -87,7 +51,7 @@
           <li class="nav_item"><a href="/index.html#gmap">Map</a></li>
       </ul>
       <div id="hero_right_wrapper">
-        <div id="countdown"></div> 
+        <div id="countdown">00D 00H 00M 00S</div> 
         <h1 id="hero_right_title">KRATOS 19</h1>
         <div id="hero_right_register">
           <a id="hero_right_register_link" href="/index.html#register">REGISTER</a>
@@ -200,27 +164,28 @@
               clearInterval(x); 
               document.getElementById("countdown").innerHTML = "Event Started!"; 
           } 
-      }, 1000); 
-  </script>
+      }, 1000);
+      
+      (function () {
+      var hamburger = {
+        navToggle: document.querySelector('.nav-toggle'),
+        nav: document.querySelector('nav'),
 
-  <script src="js/app.js"></script>
-
-  <script>
-    (function () {
-
-        var hamburger = {
-          navToggle: document.querySelector('.nav-toggle'),
-          nav: document.querySelector('nav'),
-
-          doToggle: function (e) {
-            e.preventDefault();
-            this.navToggle.classList.toggle('expanded');
-            this.nav.classList.toggle('expanded');
-          }
-        };
-
-        hamburger.navToggle.addEventListener('click', function (e) { hamburger.doToggle(e); });
-      }());
+        doToggle: function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          this.navToggle.classList.toggle('expanded');
+          this.nav.classList.toggle('expanded');
+        }
+      };
+      hamburger.navToggle.addEventListener('click', function (e) { hamburger.doToggle(e); });
+      document.addEventListener('click', function(e) {
+        const navBar = document.querySelector('.nav');
+        if(e.target !== navBar && e.target !== hamburger.navToggle && navBar.classList.contains('expanded')) {
+          hamburger.doToggle(e);
+        }
+      });
+    }());
   </script>
 
 </body>
