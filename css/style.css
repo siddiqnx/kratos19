@@ -72,6 +72,18 @@ h2, h3 {
   text-transform: uppercase;
   font-weight: bold;
   text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+  position: relative;
+}
+
+.page_title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 130px;
+  height: 4px;
+  background: white;
 }
 
 .spcl_font {
@@ -84,17 +96,20 @@ h2, h3 {
 
 #preload_overlay {
   z-index: 99999;
-  width: 100%;
-  height: 100vh;
   background: #f7f7f7;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 #preload_overlay svg {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   margin: 20px;
   display: inline-block;
 }
@@ -494,7 +509,7 @@ h2.hero_right_el {
   border-radius: 15px;
   margin-bottom: 100px;
   background-position: center;
-  background-attachment: fixed;
+  
 }
 
 #about {
@@ -569,7 +584,7 @@ h2.hero_right_el {
   padding: 42px 0px;
   text-align: center;
   width: 100%;
-  background-attachment: fixed;
+  
 }
 
 #register_form {
@@ -699,7 +714,7 @@ h2.hero_right_el {
   background: url("../images/events_bg.svg");
   background-size: cover;
   position: relative;
-  background-attachment: fixed;
+  
   padding-bottom: 50px;
 }
 
@@ -712,7 +727,7 @@ h2.hero_right_el {
   color: white;
   border-radius: 15px;
   text-align: center;
-  max-width: 455px;
+  max-width: 430px;
   -webkit-box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.4);
           box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.4);
   -webkit-transition: -webkit-transform .3s ease-in-out;
@@ -797,7 +812,6 @@ h2.hero_right_el {
       -ms-flex-pack: center;
           justify-content: center;
   height: 220px;
-  background: #551DFC;
   color: white;
   margin: 50px auto;
   border-radius: 15px;
@@ -805,16 +819,16 @@ h2.hero_right_el {
   padding: 10px;
   font-weight: bolder;
   letter-spacing: 1.5px;
-  background: -webkit-gradient(linear, left top, right top, from(#551DFC), to(rgba(0,0,0,0.3))), url("../images/main_bg.jpg") 0/350px no-repeat;
-  background: linear-gradient(to right, #551DFC, rgba(0,0,0,0.3)), url("../images/main_bg.jpg") 0/350px no-repeat;
   transition: transform  0.3s ease-in-out, box-shadow .4s ease-in-out;
   cursor: pointer;
   text-align: center;
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.4);
+  background-size: cover;
 }
 
 .event_item:hover {
   box-shadow: 2px 4px 8px 0 rgba(46,61,73,.2);
+  transform: scale(.97);
 }
 
 .event_item_active {
@@ -827,13 +841,9 @@ h2.hero_right_el {
           clip-path: none;
 }
 
-.event_item:hover {
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
-}
-
 .event_item img {
-  width: 30px;
+  width: 35px;
+  margin-bottom: 10px;
 }
 
 #second_row {
@@ -862,7 +872,37 @@ h2.hero_right_el {
   background: linear-gradient(60deg, rgba(171, 86, 207,0.6), rgba(85,29,252,0.6), rgba(117,121,255,0.6)),url("../images/technical_card_bg.jpg");
   background-size: cover;
   position: relative;
-  background-attachment: fixed;
+  
+}
+
+#technical_wrapper .pure-u-1:nth-child(1) .event_item {
+  background: linear-gradient(to right, #551DFC, rgba(0,0,0,0.3)), url("../images/technical/paper-presentation.jpg") no-repeat;
+  background-size: cover;
+}
+
+#technical_wrapper .pure-u-1:nth-child(2) .event_item {
+  background: linear-gradient(to right, #551DFC, rgba(0,0,0,0.3)), url("../images/technical/clash-of-codes.jpg") no-repeat;
+  background-size: cover;
+}
+
+#technical_wrapper .pure-u-1:nth-child(3) .event_item {
+  background: linear-gradient(to right, #551DFC, rgba(0,0,0,0.3)), url("../images/technical/treasure-hunt.jpg") no-repeat;
+  background-size: cover;
+}
+
+#technical_wrapper .pure-u-1:nth-child(4) .event_item {
+  background: linear-gradient(to right, #551DFC, rgba(0,0,0,0.3)), url("../images/technical/deadlocked-db.jpg") no-repeat;
+  background-size: cover;
+}
+
+#technical_wrapper .pure-u-1:nth-child(5) .event_item {
+  background: linear-gradient(to right, #551DFC, rgba(0,0,0,0.3)), url("../images/technical/google-it.jpg") no-repeat;
+  background-size: cover;
+}
+
+#technical_wrapper .pure-u-1:nth-child(6) .event_item {
+  background: linear-gradient(to right, #551DFC, rgba(0,0,0,0.3)), url("../images/technical/gadget-and-gizmos.jpg") no-repeat;
+  background-size: cover;
 }
 
 /* End: Technical Section */
@@ -888,7 +928,37 @@ h2.hero_right_el {
   background: linear-gradient(60deg, rgba(171, 86, 207,0.6), rgba(85,29,252,0.6), rgba(117,121,255,0.6)),url("../images/non_technical_card_bg.png");
   background-size: cover;
   position: relative;
-  background-attachment: fixed;
+  
+}
+
+#non_technical_wrapper .pure-u-1:nth-child(1) .event_item {
+  background: linear-gradient(to right, #551DFC, rgba(0,0,0,0.3)), url("../images/non-technical/murder-in-multiplayer.jpg") no-repeat;
+  background-size: cover;
+}
+
+#non_technical_wrapper .pure-u-1:nth-child(2) .event_item {
+  background: linear-gradient(to right, #551DFC, rgba(0,0,0,0.3)), url("../images/non-technical/prison-break.jpg") no-repeat;
+  background-size: cover;
+}
+
+#non_technical_wrapper .pure-u-1:nth-child(3) .event_item {
+  background: linear-gradient(to right, #551DFC, rgba(0,0,0,0.3)), url("../images/non-technical/pitch-impossible.jpg") no-repeat;
+  background-size: cover;
+}
+
+#non_technical_wrapper .pure-u-1:nth-child(4) .event_item {
+  background: linear-gradient(to right, #551DFC, rgba(0,0,0,0.3)), url("../images/non-technical/comic-quiz.jpg") no-repeat;
+  background-size: cover;
+}
+
+#non_technical_wrapper .pure-u-1:nth-child(5) .event_item {
+  background: linear-gradient(to right, #551DFC, rgba(0,0,0,0.3)), url("../images/non-technical/box-cricket.jpg") no-repeat;
+  background-size: cover;
+}
+
+#non_technical_wrapper .pure-u-1:nth-child(6) .event_item {
+  background: linear-gradient(to right, #551DFC, rgba(0,0,0,0.3)), url("../images/non-technical/gaming.jpg") no-repeat;
+  background-size: cover;
 }
 
 /* End: Non-technical Section */
@@ -914,8 +984,33 @@ h2.hero_right_el {
   background: linear-gradient(60deg, rgba(171, 86, 207,0.6), rgba(85,29,252,0.6), rgba(117,121,255,0.6)),url("../images/technical_card_bg.jpg");
   background-size: cover;
   position: relative;
-  background-attachment: fixed;
 }
+
+#online_wrapper .pure-u-1:nth-child(1) .event_item {
+  background: linear-gradient(to right, #551DFC, rgba(0,0,0,0.3)), url("../images/online/signature-meme.jpg") no-repeat;
+  background-size: cover;
+}
+
+#online_wrapper .pure-u-1:nth-child(2) .event_item {
+  background: linear-gradient(to right, #551DFC, rgba(0,0,0,0.3)), url("../images/online/picturesque.jpg") no-repeat;
+  background-size: cover;
+}
+
+#online_wrapper .pure-u-1:nth-child(3) .event_item {
+  background: linear-gradient(to right, #551DFC, rgba(0,0,0,0.3)), url("../images/online/lights-camera-action.jpg") no-repeat;
+  background-size: cover;
+}
+
+#online_wrapper .pure-u-1:nth-child(4) .event_item {
+  background: linear-gradient(to right, #551DFC, rgba(0,0,0,0.3)), url("../images/online/drama-maxx.jpg") no-repeat;
+  background-size: cover;
+}
+
+#online_wrapper .pure-u-1:nth-child(5) .event_item {
+  background: linear-gradient(to right, #551DFC, rgba(0,0,0,0.3)), url("../images/online/gamify-kratos.jpg") no-repeat;
+  background-size: cover;
+}
+
 
 /* Start: Online Section */
 
@@ -991,6 +1086,13 @@ h2.hero_right_el {
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 1px;
+}
+
+.email {
+  color: transparent;
+  background: linear-gradient(60deg, rgb(171, 86, 207), rgb(85,29,252) 20%, rgb(117,121,255));
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .number {
