@@ -195,12 +195,10 @@ var events = [
   {
     title: 'Box Cricket & Futsal',
     time: '10.00 AM',
-    description: 'Are you a cricket enthusiast? Does cricket run in your veins? Then this is the event for you!. Bowl and bat your way to victory!',
+    description: 'Fancy a game of Cricket,chaps? Or can we interest you in a friendly football game?',
     rules: [
-      'General rules <br> - 4 players in one team. <br> - Each match will be of 3 overs <br> - Each bowler can bowl only 1 over',
-      'Batting rules <br> - Batsmen to bat with at least one leg inside the batting crease before the ball is delivered only then runs will be valid',
-      'Bowling rules <br> - Underarm bowling is compulsory <br> - Ball should be pitched beyond the no ball line otherwise it will be called no ball. <br> - Bowler has to ball within the given box i.e bowling crease <br> - Any deviation from the above rules will be “No Ball” <br> - Usual No ball, Wide ball, Byes and Overthrow will be applicable <br> - Side arm bowling is not allowed',
-      'Mode of dismissals <br> - Ball going directly over the provided line of the box will be out if it doesn’t bounce inside the box even if it is a No ball <br> - Bowled <br> - Caught out <br> - Stumped out <br> - Run out <br> - Stumping on No ball will not be considered <br> - If the keeper collects the ball before it passes the stumps for stumping, then stumping will be not valid <br> - If the match is tied, then the winner of the match will the team who won the toss <br> - 2 players should be behind the bowling crease and 2 players should be ahead of the bowling crease <br> - Umpire’s Decision will be the final. No argument will be entertained with the umpire',
+      'Box Cricket Rules <br> - 4 players in one team <br> - Each match will be of 3 overs<br> - Each bowler can bowl only 1 over<br> - Batting/ Bowling rules and modes of dismissal will be disclosed on the day of the event',
+      'Futsal rules <br> - Time: 5 + 2 + 5 minutes <br> - In case of a draw, penalties will be held <br> - Knockout tournament standards',
     ],
     eventPosterBackground: '../images/non-technical/futsal-and-box-cricket.jpg',
     eventContact: [
