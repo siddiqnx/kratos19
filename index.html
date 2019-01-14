@@ -22,6 +22,40 @@
   <title>Kratos 19</title>
 </head>
 <body>
+
+  <div id="top_bar" style="display:none">
+    <div id="top_bar_logo">
+      <a href="/index.html">
+        <img class="top_bar_logo_img" src="images/kratos_logo.png" alt="Logo">
+        <h1 id="top_bar_title" class="spcl_font">KRATOS 19</h1>
+      </a>
+    </div>
+
+    <div id="top_bar_nav">
+      <ul id="right_nav">
+        <li class="nav_item"><a href="/events.html">Events</a></li>
+        <li class="nav_item"><a href="/index.html#main">About Us</a></li>
+        <li class="nav_item"><a href="/index.html#sponsors">Sponsors</a></li>
+        <li class="nav_item"><a href="#">Contact Us</a></li>
+        <li class="nav_item"><a href="/index.html#gmap">Map</a></li>
+      </ul>
+    </div>
+    <div class="nav-toggle">
+      <div class="nav-toggle-bar"></div>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./index.html#main">About Us</a></li>
+        <li><a href="./events.html">Events</a></li>
+        <li><a href="./index.html#sponsors">Sponsors</a></li>
+        <li><a href="#footer_contact">Contact Us</a></li>
+        <li><a href="./index.html#gmap">Map</a></li>
+        <li><a href="./index.html#register">Register</a></li>
+      </ul>
+    </nav>
+  </div>
+
   <div id="hero">
     <div id="hero_left">
       <div class="nav-toggle">
@@ -32,8 +66,8 @@
           <li><a href="./index.html">Home</a></li>
           <li><a href="./index.html#main">About Us</a></li>
           <li><a href="./events.html">Events</a></li>
-          <li><a href="./index.html#sponsors">Sponsors</a></li>
-          <li><a href="./index.html#footer">Contact Us</a></li>
+          <!-- <li><a href="./index.html#sponsors">Sponsors</a></li> -->
+          <li><a href="#footer_contact">Contact Us</a></li>
           <li><a href="./index.html#gmap">Map</a></li>
           <li><a href="./index.html#register">Register</a></li>
         </ul>
@@ -42,16 +76,18 @@
         <img id="kratos_logo" src="images/kratos_logo.png" alt="Logo">
       </div>
     </div>
+
     <div id="hero_right">
       <ul id="right_nav">
           <li class="nav_item"><a href="/events.html">Events</a></li>
           <li class="nav_item"><a href="/index.html#main">About Us</a></li>
-          <li class="nav_item"><a href="/index.html#sponsors">Sponsors</a></li>
-          <li class="nav_item"><a href="./index.html#footer">Contact Us</a></li>
+          <!-- <li class="nav_item"><a href="/index.html#sponsors">Sponsors</a></li> -->
+          <li class="nav_item"><a href="#footer_contact">Contact Us</a></li>
           <li class="nav_item"><a href="/index.html#gmap">Map</a></li>
       </ul>
       <div id="hero_right_wrapper">
-        <div id="countdown">00D 00H 00M 00S</div> 
+        <div id="countdown"><span class="countdown_item"><span class="countdown_num">00</span><span class="countdown_unit"> Days </span></span><span class="countdown_item"><span class="countdown_num">00</span><span class="countdown_unit"> Hours </span></span><span class="countdown_item"><span class="countdown_num">00</span><span class="countdown_unit"> Minutes </span></span><span class="countdown_item"><span class="countdown_num">00</span><span class="countdown_unit"> Seconds </span></span>
+        </div> 
         <h1 id="hero_right_title">KRATOS 19</h1>
         <div id="hero_right_register">
           <a id="hero_right_register_link" href="/index.html#register">REGISTER</a>
@@ -63,6 +99,7 @@
         </div>
       </div>
     </div>
+
     <a onclick="smoothScroll()" id="scroll_arrow"></a>
     
   </div>
@@ -72,13 +109,13 @@
       <div id="about">
         <div class="about_item">
           <h2 class="about_title">ABOUT OUR DEPARTMENT</h2>
-          <p class="about_content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam corporis cum iure aspernatur accusamus quam, dignissimos distinctio ex, eaque tempore explicabo accusantium expedita minima sequi dolorum est quis at laudantium! <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur veniam cupiditate id nulla corporis et deserunt dignissimos nesciunt voluptas accusamus, dolores assumenda placeat error magni? Rem neque odit minus dolor!</p>
+          <p class="about_content">The Computer Science and Engineering Department of Easwari Engineering College has long since held a position that bespoke excellence and zeal. <br> The department staunchly believes in the inculcation of the spirit of innovation along with academics. To intertwine the two, the department encourages among the students, the conduction and participation of workshops, tech fests and symposiums. <br> It firmly believes that literature alone cannot bridge the gap to enlightenment but requires the mortar of practical implementation to strengthen the foundation.
         </div>
         <span class="about_border"></span>
         <div class="about_item">
           <h2 class="about_title">ABOUT KRATOS 19</h2>
           <p class="about_content">
-            KRATOS is the brainchild of the department of CSE in its efforts to bring a change in the way we view computer science. <br> Bright ideas and new concepts that reinforce and recalibrate the way in which we see and learn from the world .It is a long-standing tradition of our department to invite the budding minds of the student community to our grand event, Kratos’19. <br> Here you can code your way to victory, solve a crime, breakout from prison and much more. So join us on our quest, gear up and let the games begin.
+            Kratos, the national level technical symposium organized by the department of Computer Science engineering, represents the mantle of pride of CSE. <br> Emblazoned by the mighty lion, with a vivid mane, the Kratos strives to be just as fierce and bold. The symposium integrates a plethora of technical and non technical events; each crafted and designed to ignite the minds of our participants and tailored to illuminate their knowledge all the while indulging in an atmosphere of fun and merriment. <br>  At Kratos, we believe in simulating the minds of the future engineers today, to shape a better future for tomorrow.
            </p>
         </div>
       </div>
@@ -89,20 +126,28 @@
     <div id="register_wrapper">
       <h2 class="register_title">REGISTER</h2>
       <form id="register_form" action="#">
-        <label for="name">Name</label>
-        <input type="text" name="user_name" id="name"  placeholder="Enter your Name">
-        <label for="email">Email ID</label>
-        <input type="text" name="user_email" id="email"  placeholder="Enter your Email ID">
-        <label for="phno">Phone Number</label>
-        <input type="text" name="user_phno" id="phno"  placeholder="Enter your Phone Number">
-        <label for="college">College</label>
-        <input type="text" name="user_college" id="college" placeholder="Enter your College">
+        <label type="text" for="name">
+          <input type="text" name="user_name" id="name" placeholder="Enter your name" required="">
+          <span class="label">Name</span>
+        </label>
+        <label type="text" for="email">
+          <input type="text" name="user_email" id="email" placeholder="Enter your email ID" required="">
+          <span class="label">Email ID</span>
+        </label>
+        <label type="text" for="phno">
+          <input type="text" name="user_phno" id="phno" placeholder="Enter your phone number" required="">
+          <span class="label">Phone Number</span>
+        </label>
+        <label type="text" for="college">
+          <input type="text" name="user_college" id="college" placeholder="Enter your college" required="">
+          <span class="label">College</span>
+        </label>
         <input type="submit" value="Register">
       </form>
     </div>
   </div>
 
-  <div id="sponsors" class="pure-g">
+  <!-- <div id="sponsors" class="pure-g">
     <h2 id="sponsors_title" class="pure-u-1">SPONSORS</h2>
     <a href="#" class="pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-4"><img src="images/sponsor1_logo.png" alt=""></a>
     <a href="#" class="pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-4"><img src="images/sponsor1_logo.png" alt=""></a>
@@ -110,7 +155,7 @@
     <a href="#" class="pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-4"><img src="images/sponsor1_logo.png" alt=""></a>
     <a href="#" class="pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-4"><img src="images/sponsor1_logo.png" alt=""></a>
     <a href="#" class="pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-4"><img src="images/sponsor1_logo.png" alt=""></a>
-  </div>
+  </div> -->
 
   <div id="gmap">
     <div class="mapouter">
@@ -133,8 +178,8 @@
         <li><a href="./index.html">Home</a></li>
         <li><a href="./index.html#main">About Us</a></li>
         <li><a href="./events.html">Events</a></li>
-        <li><a href="./index.html#sponsors">Sponsors</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <!-- <li><a href="./index.html#sponsors">Sponsors</a></li> -->
+        <li><a href="#footer_contact">Contact Us</a></li>
         <li><a href="./index.html#gmap">Map</a></li>
         <li><a href="./index.html#register">Register</a></li>
         </ul>
@@ -177,25 +222,44 @@
         } 
     }, 1000);
     
+    function checkVisible(elm) {
+      var rect = elm.getBoundingClientRect();
+      var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+      return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+    }
+
+    window.addEventListener('scroll', function(e) {
+      const heroLeft = document.querySelector("#hero_left .nav-toggle");
+      const navRight = document.querySelector("#hero_right #right_nav");
+      if(!checkVisible(heroLeft) || !checkVisible(navRight)) {
+        document.getElementById('top_bar').style.display = "block";
+      } else {
+        document.getElementById('top_bar').style.display = "none";
+      }
+    });
+
     (function () {
     var hamburger = {
-      navToggle: document.querySelector('.nav-toggle'),
-      nav: document.querySelector('nav'),
+      navToggle: document.querySelectorAll('.nav-toggle'),
+      nav: document.querySelectorAll('nav'),
 
-      doToggle: function (e) {
+      doToggle: function (e, i) {
         e.preventDefault();
         e.stopPropagation();
-        this.navToggle.classList.toggle('expanded');
-        this.nav.classList.toggle('expanded');
+        this.navToggle[i].classList.toggle('expanded');
+        this.nav[i].classList.toggle('expanded');
       }
     };
-    hamburger.navToggle.addEventListener('click', function (e) { hamburger.doToggle(e); });
+    
+    hamburger.navToggle[0].addEventListener('click', function (e) { hamburger.doToggle(e, 0); });
+    hamburger.navToggle[1].addEventListener('click', function (e) { hamburger.doToggle(e, 1); });
+
     document.addEventListener('click', function(e) {
-        const navBar = document.querySelector('.nav');
-        if(e.target !== navBar && e.target !== hamburger.navToggle && navBar.classList.contains('expanded')) {
-          hamburger.doToggle(e);
-        }
-      });
+      const navBar = document.querySelector('.nav');
+      if(e.target !== navBar && e.target !== hamburger.navToggle && navBar.classList.contains('expanded') && !hamburger.nav.contains(e.target)) {
+        hamburger.doToggle(e);
+      }
+    });
     }());
   </script>
 
