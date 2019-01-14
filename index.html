@@ -228,14 +228,16 @@
       doToggle: function (e) {
         e.preventDefault();
         e.stopPropagation();
+        console.log('Hello');
         this.navToggle.classList.toggle('expanded');
         this.nav.classList.toggle('expanded');
       }
     };
+    
     hamburger.navToggle.addEventListener('click', function (e) { hamburger.doToggle(e); });
     document.addEventListener('click', function(e) {
       const navBar = document.querySelector('.nav');
-      if(e.target !== navBar && e.target !== hamburger.navToggle && navBar.classList.contains('expanded')) {
+      if(e.target !== navBar && e.target !== hamburger.navToggle && navBar.classList.contains('expanded') && !hamburger.nav.contains(e.target)) {
         hamburger.doToggle(e);
       }
     });

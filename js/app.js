@@ -333,37 +333,36 @@ var events = [
     ],
   },
 ]
-
-var eventTopicsSubtitle = document.createElement('h4');
-eventTopicsSubtitle.setAttribute('class', 'event_sub_title event_desc_width');
-eventTopicsSubtitle.innerHTML = 'Topics';
-var eventTopics = document.createElement('ul');
-eventTopics.setAttribute('id', 'event_desc_topics');
-eventTopics.setAttribute('class', 'event_desc_width');
-
-eventItem[0].addEventListener('click', (function() {
-  events[0].topics.forEach(function(topic) {
-    var topicList = document.createElement('li');
-    topicList.innerHTML = topic;
-    eventTopics.appendChild(topicList);
-  });
-  document.getElementById('event_desc_rules').parentNode.insertBefore(eventTopicsSubtitle,document.getElementById('event_desc_rules').nextSibling);
-  document.getElementById('event_desc_rules').parentNode.insertBefore(eventTopics, eventTopicsSubtitle.nextSibling);
-}));
-
+var currentlyClicked = null;
 for(var i = 0; i < eventItem.length; i++) {
   eventItem[i].addEventListener('click', (function(i) {
     return function() {
-      if(i !== 0) {
-        eventTopicsSubtitle.innerHTML = '';
-        eventTopics.innerHTML = '';
+      currentlyClicked = i;
+      if(i === 0) {
+        var eventTopics = document.getElementById('event_desc_topics');
+        var eventTopicHeading = document.getElementById('event_topics_heading');
+        events[i].topics.forEach(function(topic) {
+          var topicList = document.createElement('li');
+          topicList.innerHTML = topic;
+          eventTopics.appendChild(topicList);
+        });
+        eventTopics.style.visibility = "visible";
+        eventTopicHeading.style.visibility = "visible";
+      } else {
+        console.log('Hello');
+        var eventTopics = document.getElementById('event_desc_topics');
+        var eventTopicHeading = document.getElementById('event_topics_heading');
+        eventTopics.style.visibility = "hidden";
+        eventTopicHeading.style.visibility = "hidden";
       }
       var eventDescription = document.getElementById('event_description');
       eventDescription.style.background = 'linear-gradient(180deg, rgba(0,0,0,.8), rgba(85, 29, 252, .9), rgba(85, 29, 252, .9)) center center / cover, url(' + events[i].eventPosterBackground +')';
       eventDescription.style.backgroundSize = 'cover';
       eventDescription.style.backgroundPosition = 'center';
       eventDescription.setAttribute('aria-hidden', false);
+      eventDescription.scrollTop = 1;
       eventDescription.scrollIntoView();
+      eventDescription.scrollTo(0, 0);
       document.body.classList.toggle('noscroll');
       document.getElementById('event_desc_title').innerHTML = events[i].title;
       // document.getElementById('event_desc_time').innerHTML = events[i].time;
@@ -394,4 +393,5 @@ document.getElementById('event_desc_close').addEventListener('click', function(e
   var eventDescription = document.getElementById('event_description');
   eventDescription.setAttribute('aria-hidden', true);
   document.body.classList.toggle('noscroll');
+  document.getElementsByClassName('a')[currentlyClicked].scrollIntoView();
 })
