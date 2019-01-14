@@ -640,7 +640,8 @@ h2.hero_right_el {
   font-size: 2.5rem;
   font-weight: bold;
   text-transform: uppercase;
-  padding-top: 360px;
+  padding-top: 310px;
+  letter-spacing: 2px;
 }
 
 #register_form {

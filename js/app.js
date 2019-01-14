@@ -35,7 +35,7 @@ var events = [
     ],
     eventPosterBackground: '../images/technical/paper-presentation.jpg',
     eventContact: [
-      '<a href="tel:+919500067963"><span class="event_desc_contact_name">Sundari H</span> <span class="event_desc_contact_num">+91 950 006 7963‬‬‬‬‬</span></a>',
+      '<a href="tel:+919677236252"><span class="event_desc_contact_name">Naveen Nanda</span> <span class="event_desc_contact_num">+91 967 723 6252</span></a>',
       '<a href="tel:‭+918939592136"><span class="event_desc_contact_name">Priyadharshni R </span> <span class="event_desc_contact_num">‭+91 893 959 2136</span></a>',
       
     ],
