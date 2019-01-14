@@ -46,7 +46,7 @@ var events = [
     description: 'Comrades! It’s a Win or Die Combat!',
     rules: [
       'Each team might contain a minimum of 2 participants and a maximum of 3 participants (Bring it on!)',
-      'The event consists of two rounds which we will revealed on the spot (Predictions won’t work in the battlefield, Mate!)',
+      'The event consists of two rounds which will be revealed on the spot (Predictions won’t work in the battlefield, Mate!)',
       'Coding of the scenarios should be done only in Java or C (And that’s your mighty weapon!)',
       'Participants caught cheating or copying codes online will be disqualified from the event immediately (Gun-point!)',
       'Round 1: 1 hour [Elimination Round]',
