@@ -390,7 +390,7 @@ h2.hero_right_el {
   position: sticky;
   top: 0;
   background: white;
-  z-index: 1;
+  z-index: 2;
   -webkit-box-shadow: 0 5px 15px rgba(0,0,0,0.2);
           box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
@@ -628,7 +628,7 @@ h2.hero_right_el {
 }
 
 #register_wrapper::after {
-  content: 'Registration will open soon';
+  content: 'Registration will opened soon';
   position: absolute;
   top: 0;
   left: 0;
@@ -943,7 +943,6 @@ h2.hero_right_el {
   background: linear-gradient(90deg, rgb(171, 86, 207), rgb(85,29,252) , rgb(117,121,255));
   background-clip: text;
   -webkit-background-clip: text;
-  text-transform: 
 }
 
 /* End: Events Section */
@@ -1275,7 +1274,7 @@ h2.hero_right_el {
 [aria-hidden="false"] { 
   transition: opacity 1s;
   width: 100%; 
-  z-index: 1;  
+  z-index: 3;  
   opacity: 1; 
 }
 

@@ -361,7 +361,6 @@ for(var i = 0; i < eventItem.length; i++) {
       eventDescription.style.backgroundPosition = 'center';
       eventDescription.setAttribute('aria-hidden', false);
       eventDescription.scrollTop = 1;
-      eventDescription.scrollIntoView();
       eventDescription.scrollTo(0, 0);
       document.body.classList.toggle('noscroll');
       document.getElementById('event_desc_title').innerHTML = events[i].title;
@@ -380,18 +379,29 @@ for(var i = 0; i < eventItem.length; i++) {
         contactList.innerHTML = contact;
         document.getElementById('event_contact').appendChild(contactList);
       });
+      eventDescription.scrollIntoView();
       // document.getElementById('event_head_name').innerHTML = events[i].eventHead;
       // document.getElementById('event_head_phone').innerHTML = events[i].eventHeadMobile;
     }
   })(i));
 }
 
-document.getElementById('event_desc_close').addEventListener('click', function(e) {
+function close(e) {
   e.preventDefault();
   e.stopPropagation();
-
   var eventDescription = document.getElementById('event_description');
   eventDescription.setAttribute('aria-hidden', true);
   document.body.classList.toggle('noscroll');
   window.scrollTo(currentlyClicked[0], currentlyClicked[1]);
+}
+
+document.addEventListener('keyup', function(e) {
+  var eventDescription = document.getElementById('event_description');
+  if(e.keyCode === 27 && eventDescription.getAttribute('aria-hidden') === "false") {
+    close(e);
+  }
+})
+
+document.getElementById('event_desc_close').addEventListener('click', function(e) {
+  close(e);
 })
