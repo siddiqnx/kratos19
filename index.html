@@ -23,7 +23,7 @@
 </head>
 <body>
 
-  <div id="top_bar" style="display:none">
+  <div id="top_bar" style="transform: translateY(-60px)">
     <div id="top_bar_logo">
       <a href="/index.html">
         <img class="top_bar_logo_img" src="images/kratos_logo.png" alt="Logo">
@@ -206,20 +206,23 @@
     }
     //End: Smooth Scroll
 
+    function prezero(n){
+      return n > 9 ? "" + n: "0" + n;
+    }
     var deadline = new Date("Feb 13, 2019 15:37:25").getTime(); 
     var x = setInterval(function() { 
-    var now = new Date().getTime(); 
-    var t = deadline - now; 
-    var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
-    var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); 
-    var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
-    var seconds = Math.floor((t % (1000 * 60)) / 1000); 
-    document.getElementById("countdown").innerHTML = days + "D "  
-    + hours + "H " + minutes + "M " + seconds + "S"; 
-        if (t < 0) { 
-            clearInterval(x); 
-            document.getElementById("countdown").innerHTML = "Event Started!"; 
-        } 
+      var now = new Date().getTime(); 
+      var t = deadline - now; 
+      var days = prezero(Math.floor(t / (1000 * 60 * 60 * 24)));
+      var hours = prezero(Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))); 
+      var minutes = prezero(Math.floor((t % (1000 * 60 * 60)) / (1000 * 60))); 
+      var seconds = prezero(Math.floor((t % (1000 * 60)) / 1000));
+      document.getElementById("countdown").innerHTML = '<span class="countdown_item"><span class="countdown_num">' + days + '</span><span class="countdown_unit"> Days </span></span>'  
+      + '<span class="countdown_item"><span class="countdown_num">' + hours + '</span><span class="countdown_unit"> Hours </span></span>' + '<span class="countdown_item"><span class="countdown_num">' + minutes + '</span><span class="countdown_unit"> Minutes </span></span>' + '<span class="countdown_item"><span class="countdown_num">' + seconds + '</span><span class="countdown_unit"> Seconds </span></span>'; 
+      if (t < 0) { 
+          clearInterval(x); 
+          document.getElementById("countdown").innerHTML = "Event Started!"; 
+      } 
     }, 1000);
     
     function checkVisible(elm) {
@@ -232,9 +235,9 @@
       const heroLeft = document.querySelector("#hero_left .nav-toggle");
       const navRight = document.querySelector("#hero_right #right_nav");
       if(!checkVisible(heroLeft) || !checkVisible(navRight)) {
-        document.getElementById('top_bar').style.display = "block";
+        document.getElementById('top_bar').style.transform = "translateY(0)";
       } else {
-        document.getElementById('top_bar').style.display = "none";
+        document.getElementById('top_bar').style.transform = "translateY(-60px)";
       }
     });
 

@@ -331,6 +331,7 @@ h2.hero_right_el {
   line-height: 1;
   margin-top: auto;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 #hero_right_p {
@@ -387,12 +388,13 @@ h2.hero_right_el {
 #top_bar {
   width: 100%;
   height: 60px;
-  position: sticky;
+  position: fixed;
   top: 0;
   background: white;
   z-index: 2;
   -webkit-box-shadow: 0 5px 15px rgba(0,0,0,0.2);
           box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform .2s ease-in-out;
 }
 
 #top_bar_logo {
@@ -628,7 +630,7 @@ h2.hero_right_el {
 }
 
 #register_wrapper::after {
-  content: 'Registration will opened soon';
+  content: 'Registration will be opened soon';
   position: absolute;
   top: 0;
   left: 0;
@@ -1444,17 +1446,17 @@ h2.hero_right_el {
 
   #hero_left {
     width: 100%;
-    height: 25vh;
+    height: 20vh;
     filter: none;
   }
 
   #hero_left img {
-    width: 140px;
+    width: 85px;
   }
 
   #hero_right {
     width: 100%;
-    height: 75vh;
+    height: 80vh;
   }
 
   #hero_left_wrapper {
@@ -1468,12 +1470,18 @@ h2.hero_right_el {
   #hero_right_wrapper {
     height: 100%;
   }
+
+  #countdown {
+    padding: 15px 35px;
+    margin-top: 60px;
+  }
+
   #hero_right_title {
     margin-top: -50px;
   }
 
   #hero_right_subtitle {
-    text-transform: uppercase;
+    margin-bottom: 35px;
   }
 
   #hero_right_subtitle h2 {
@@ -1605,7 +1613,7 @@ h2.hero_right_el {
 @media screen and (max-height: 540px) {
   #hero_right_register {
     margin-top: auto;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
   }
   
   #hero_right_subtitle {
