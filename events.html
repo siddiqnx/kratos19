@@ -7,6 +7,7 @@
   
   <link rel="stylesheet" href="css/puregrid.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animate.css">
 
   <title>Events | Kratos 19</title> 
 </head>
@@ -14,19 +15,19 @@
 
   <div id="top_bar">
     <div id="top_bar_logo">
-      <a href="./index.html">
-        <img class="top_bar_logo_img" src="images/kratos_logo.png" alt="Logo">
-        <h1 id="top_bar_title" class="spcl_font">KRATOS 19</h1>
+      <a href="/index.html">
+        <img data-wow-delay=".2s" class="top_bar_logo_img wow fadeInLeft" src="images/kratos_logo.png" alt="Logo">
+        <h1 id="top_bar_title" class="spcl_font wow fadeInDown">KRATOS 19</h1>
       </a>
     </div>
 
     <div id="top_bar_nav">
-      <ul id="right_nav">
-        <li class="nav_item"><a href="/events.html">Events</a></li>
-        <li class="nav_item"><a href="/index.html#main">About Us</a></li>
+      <ul id="right_nav" class="top_bar_right_nav">
+        <li class="nav_item wow fadeInDown"><a href="/events.html">Events</a></li>
+        <li data-wow-delay=".1s" class="nav_item wow fadeInDown"><a href="/index.html#main">About Us</a></li>
         <!-- <li class="nav_item"><a href="/index.html#sponsors">Sponsors</a></li> -->
-        <li class="nav_item"><a href="#footer_contact">Contact Us</a></li>
-        <li class="nav_item"><a href="/index.html#gmap">Map</a></li>
+        <li data-wow-delay=".2s" class="nav_item wow fadeInDown"><a href="#footer_contact">Contact Us</a></li>
+        <li data-wow-delay=".3s" class="nav_item wow fadeInDown"><a href="/index.html#gmap">Map</a></li>
       </ul>
     </div>
     <div class="nav-toggle">
@@ -69,11 +70,11 @@
   <div id="events">
     <div id="events_wrapper">
       <div class="event_section_title">
-        <h2 class="event_title_heading page_title" data-hello="Events">Events</h2>
+        <h2 class="event_title_heading page_title wow fadeInDown" data-hello="Events">Events</h2>
       </div>
       <div class="pure-g event_section_body">
         <div class="pure-u-1 pure-u-lg-1-3 events_item">
-          <div class="events_item_content events_item_content_first">
+          <div class="events_item_content events_item_content_first wow fadeInLeft">
             <a href="#technical">
               <h3 class="events_item_heading">Technical Events</h3>
               <p class="events_item_p">At Kratos we believe that true knowledge comes with the implemention of one's learnings. Thus, Kratos comprises of a wide variety of events each designed to spark those inquisitive minds and encourage innovation.</p>
@@ -81,7 +82,7 @@
           </div>
         </div>
         <div class="pure-u-1 pure-u-lg-1-3 events_item">
-          <div class="events_item_content events_item_content_second">
+          <div class="events_item_content events_item_content_second wow fadeInUp">
             <a href="#non_technical">
               <h3 class="events_item_heading">Non-Technical Events</h3>
               <p class="events_item_p">The life of an engineering student can get a little hard at times and so, to add a little color and a whole lot of fun, we at Kratos have in store multitude of events to cheer them up and tease their smiles.</p>
@@ -89,7 +90,7 @@
           </div>
         </div>
         <div class="pure-u-1 pure-u-lg-1-3 events_item">
-          <div class="events_item_content events_item_content_third">
+          <div class="events_item_content events_item_content_third wow fadeInRight">
             <a href="#online">
               <h3 class="events_item_heading">Online Events</h3>
               <p class="events_item_p">Kratos forays into the world of the web to bring you a series of online events ranging from poster designing to meme creation, creating a fun little forum to showcase many a talent.</p>
@@ -100,49 +101,49 @@
     </div>
   </div>
 
-  <div class="quote_space">
+  <div class="quote_space wow fadeIn">
     <h3>Failure doesn’t mean GAME OVER. It means try again with EXPERIENCE POINTS.</h3>
   </div>
 
   <div id="technical">
     <div id="technical_wrapper">
-      <div class="event_section_title">
+      <div data-wow-duration=".5s" class="event_section_title wow fadeInDown">
         <h2 class="event_title_heading page_title">Technical Events</h2>
       </div>
       
       <div class="pure-g event_section_body">
-        <div class="pure-u-1 pure-u-lg-1-3 pure-u-md-1-2 a">
-          <div class="event_item">
+        <div class="pure-u-1 pure-u-lg-1-3 pure-u-md-1-2">
+          <div data-wow-duration=".5s" class="event_item wow fadeInUp">
             <img src="images/event_icon_pp.png">
             Paper Presentation
           </div>
         </div>
-        <div class="pure-u-1 pure-u-lg-1-3 pure-u-md-1-2 a">
-          <div class="event_item">
+        <div class="pure-u-1 pure-u-lg-1-3 pure-u-md-1-2">
+          <div data-wow-duration=".5s" class="event_item wow fadeInUp">
             <img src="images/event_icon_coc.png">
             Clash of Codes
           </div>
         </div>
-        <div class="pure-u-1 pure-u-lg-1-3 pure-u-md-1-2 a">
-          <div class="event_item">
+        <div class="pure-u-1 pure-u-lg-1-3 pure-u-md-1-2">
+          <div data-wow-duration=".5s" class="event_item wow fadeInUp">
             <img src="images/event_icon_th.png">
             Tech Treasure Hunt
           </div>
         </div>
-        <div class="pure-u-1 pure-u-lg-1-3 pure-u-md-1-2 a">  
-          <div class="event_item">
+        <div class="pure-u-1 pure-u-lg-1-3 pure-u-md-1-2">  
+          <div data-wow-duration=".5s" class="event_item wow fadeInUp">
             <img src="images/event_icon_ddb.png">
             Deadlocked DB
           </div>
         </div>
-        <div class="pure-u-1 pure-u-lg-1-3 pure-u-md-1-2 a">
-          <div class="event_item">
+        <div class="pure-u-1 pure-u-lg-1-3 pure-u-md-1-2">
+          <div data-wow-duration=".5s" class="event_item wow fadeInUp">
             <img src="images/event_icon_gi.png">
             Google It
           </div>
         </div>
-        <div class="pure-u-1 pure-u-lg-1-3 pure-u-md-1-2 a">
-          <div class="event_item">
+        <div class="pure-u-1 pure-u-lg-1-3 pure-u-md-1-2">
+          <div data-wow-duration=".5s" class="event_item wow fadeInUp">
             <img src="images/event_icon_gag.png">
             Gadgets and Gizmos
           </div>
@@ -152,49 +153,49 @@
     </div>
   </div>
 
-  <div class="quote_space">
+  <div class="quote_space wow fadeIn">
     <h3>Life is a game. All you must do is, know how to play it.</h3>
   </div>
 
   <div id="non_technical">
     <div id="non_technical_wrapper">
-      <div class="event_section_title">
+      <div data-wow-duration=".5s" class="event_section_title wow fadeInDown">
         <h2 class="event_title_heading page_title">Non-Technical Events</h2>
       </div>
       
       <div class="pure-g event_section_body">
-        <div class="pure-u-1 pure-u-lg-1-3 pure-u-md-1-2 a">
-          <div class="event_item">
+        <div class="pure-u-1 pure-u-lg-1-3 pure-u-md-1-2">
+          <div data-wow-duration=".5s" class="event_item wow fadeInUp">
             <img src="images/event_icon_mim.png">
             Murder in Multiplayer
           </div>
         </div>
-        <div class="pure-u-1 pure-u-lg-1-3 pure-u-md-1-2 a">
-          <div class="event_item">
+        <div class="pure-u-1 pure-u-lg-1-3 pure-u-md-1-2">
+          <div data-wow-duration=".5s" class="event_item wow fadeInUp">
             <img src="images/event_icon_pb.png">
             Prison Break
           </div>
         </div>
-        <div class="pure-u-1 pure-u-lg-1-3 pure-u-md-1-2 a">
-          <div class="event_item">
+        <div class="pure-u-1 pure-u-lg-1-3 pure-u-md-1-2">
+          <div data-wow-duration=".5s" class="event_item wow fadeInUp">
             <img src="images/event_icon_pi.png">
             Pitch Impossible
           </div>
         </div>
-        <div class="pure-u-1 pure-u-lg-1-3 pure-u-md-1-2 a">  
-          <div class="event_item">
+        <div class="pure-u-1 pure-u-lg-1-3 pure-u-md-1-2">  
+          <div data-wow-duration=".5s" class="event_item wow fadeInUp">
             <img src="images/event_icon_cq.png">
             Comic Quiz
           </div>
         </div>
-        <div class="pure-u-1 pure-u-lg-1-3 pure-u-md-1-2 a">
-          <div class="event_item">
+        <div class="pure-u-1 pure-u-lg-1-3 pure-u-md-1-2">
+          <div data-wow-duration=".5s" class="event_item wow fadeInUp">
             <img src="images/event_icon_bc.png">
             Box Cricket & Futsal
           </div>
         </div>
-        <div class="pure-u-1 pure-u-lg-1-3 pure-u-md-1-2 a">
-          <div class="event_item">
+        <div class="pure-u-1 pure-u-lg-1-3 pure-u-md-1-2">
+          <div data-wow-duration=".5s" class="event_item wow fadeInUp">
             <img src="images/event_icon_gm.png">
             Gaming
           </div>
@@ -204,42 +205,42 @@
     </div>
   </div>
 
-  <div class="quote_space">
+  <div class="quote_space wow fadeIn">
     <h3>You don’t stop gaming because you grow old, you grow old because you stop gaming.</h3>
   </div>
 
   <div id="online">
     <div id="online_wrapper">
-      <div class="event_section_title">
+      <div data-wow-duration=".5s" class="event_section_title wow fadeInDown">
         <h2 class="event_title_heading page_title">Online Events</h2>
       </div>
       <div class="pure-g event_section_body">
-        <div class="pure-u-1 pure-u-lg-1-3 pure-u-md-1-2 a">
-        <div class="event_item">
+        <div class="pure-u-1 pure-u-lg-1-3 pure-u-md-1 a">
+        <div data-wow-duration=".5s" class="event_item wow fadeInUp">
           <img src="images/event_icon_smc.png">
           Signature Meme Contest
         </div>
         </div>
-        <div class="pure-u-1 pure-u-lg-1-3 pure-u-md-1-2 a">
-          <div class="event_item">
+        <div class="pure-u-1 pure-u-lg-1-3 pure-u-md-1-2">
+          <div data-wow-duration=".5s" class="event_item wow fadeInUp">
             <img src="images/event_icon_pq.png">
             Picturesque
           </div>
         </div>
-        <div class="pure-u-1 pure-u-lg-1-3 pure-u-md-1-2 a">
-          <div class="event_item">
+        <div class="pure-u-1 pure-u-lg-1-3 pure-u-md-1-2">
+          <div data-wow-duration=".5s" class="event_item wow fadeInUp">
             <img src="images/event_icon_lca.png">
             Lights Camera Action!
           </div>
         </div>
-        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2 a">
-          <div class="event_item">
+        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
+          <div data-wow-duration=".5s" class="event_item wow fadeInUp">
             <img src="images/event_icon_dm.png">
             Drama Maxx
           </div>
         </div>
-        <div class="pure-u-1 pure-u-md-1-2 a">
-          <div class="event_item">
+        <div class="pure-u-1 pure-u-md-1-2">
+          <div data-wow-duration=".5s" class="event_item wow fadeInUp">
             <img src="images/event_icon_gk.png">
             Gamify Kratos
           </div>
@@ -249,35 +250,34 @@
   </div>
   
   <div id="footer">
-      <div id="footer_social">
-        <a href="https://www.facebook.com/Kratos2k19" target="_blank"><img src="./images/social_fb.png" alt="FB" class="footer_social_icon"></a>
-        <a href="https://www.instagram.com/kratos2k19" target="_blank"><img src="./images/social_instagram.png" alt="IG" class="footer_social_icon"></a>
-        <a href="https://twitter.com/kratos2k19" target="_blank"><img src="./images/social_twitter.png" alt="TW" class="footer_social_icon"></a>
-      </div>
-      <div id="footer_bottom">
-        <div id="footer_nav">
-          <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./index.html#main">About Us</a></li>
-          <li><a href="./events.html">Events</a></li>
-          <!-- <li><a href="./index.html#sponsors">Sponsors</a></li> -->
-          <li><a href="#footer_contact">Contact Us</a></li>
-          <li><a href="./index.html#gmap">Map</a></li>
-          <li><a href="./index.html#register">Register</a></li>
-          </ul>
-        </div>
-        <div id="footer_contact">
-          <h2>Get in Touch</h2>
-          <ul id="footer_contact_list">
-            <li class="footer_contact_list_item"><span class="post">President</span> <br> Ashwin Suganthan <span class="number">+91 877 894 0437</span> </li>
-            <li class="footer_contact_list_item"><span class="post">Vice President</span> <br> Sivachandran <span class="number">+91 979 052 4703</span> </li>
-            <li class="footer_contact_list_item"></li>
-            <li class="footer_contact_list_item"><span class="post">Email</span> <br> <a class="email" href="mailto:kratoshelpdesk@gmail.com" target="_top">kratoshelpdesk@gmail.com</a></li>
-          </ul>
-        </div>
-        <span id="footer_copyright">Copyright © | Easwari Engineering College</span>
-      </div>
+    <div id="footer_social">
+      <a href="https://www.facebook.com/Kratos2k19" target="_blank"><img class="wow flipInX" src="./images/social_fb.png" alt="FB" class="footer_social_icon"></a>
+      <a href="https://www.instagram.com/kratos2k19" target="_blank"><img data-wow-delay=".1s" class="wow flipInX" src="./images/social_instagram.png" alt="IG" class="footer_social_icon"></a>
+      <a href="https://twitter.com/kratos2k19" target="_blank"><img data-wow-delay=".2s" class="wow flipInX" src="./images/social_twitter.png" alt="TW" class="footer_social_icon"></a>
     </div>
+    <div id="footer_bottom">
+      <div id="footer_nav">
+        <ul>
+        <li class="wow fadeInLeft" ><a href="./index.html">Home</a></li>
+        <li data-wow-delay=".05s" class="wow fadeInLeft"><a  href="./index.html#main">About Us</a></li>
+        <li data-wow-delay=".1s" class="wow fadeInLeft" ><a href="./events.html">Events</a></li>
+        <!-- <li data-wow-delay=".15s" class="wow fadeInLeft"><a  href="./index.html#sponsors">Sponsors</a></li> -->
+        <li data-wow-delay=".2s" class="wow fadeInLeft" ><a href="#footer_contact">Contact Us</a></li>
+        <li data-wow-delay=".25s" class="wow fadeInLeft"><a  href="./index.html#gmap">Map</a></li>
+        <li data-wow-delay=".3s" class="wow fadeInLeft"><a href="./index.html#register">Register</a></li>
+        </ul>
+      </div>
+      <div class id="footer_contact">
+        <h2 class="wow fadeInDown">Get in Touch</h2>
+        <ul id="footer_contact_list">
+          <li data-wow-delay=".1s" class="footer_contact_list_item wow fadeInRight"><span class="post">President</span> <br> Ashwin Suganthan <span class="number"><a href="tel:+918778940437">+91 877 894 0437</a></span> </li>
+          <li data-wow-delay=".2s" class="footer_contact_list_item wow fadeInRight"><span class="post">Treasurer</span> <br> Vaisshnavi Ganesaraman<span class="number"><a href="tel:+919884899934">+91 988 489 9934</a></span> </li>
+          <li data-wow-delay=".3s" class="footer_contact_list_item wow fadeInRight"><span class="post">Email</span> <br> <a class="email" href="mailto:kratoshelpdesk@gmail.com" target="_top">kratoshelpdesk@gmail.com</a></li>
+        </ul>
+      </div>
+      <span id="footer_copyright">Copyright © | Easwari Engineering College</span>
+    </div>
+  </div>
     
     <script>
     (function () {
@@ -317,5 +317,9 @@
 
     </script>
     <script src="js/app.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
 </body>
 </html>

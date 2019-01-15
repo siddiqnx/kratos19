@@ -210,13 +210,13 @@ var events = [
   {
     title: 'Gaming',
     time: '10.00 AM',
-    description: 'Calling all avid gamer in the region to the battlefield! Dust off your joystick , brush up  your cheat codes and lets play.',
+    description: 'Calling all avid gamers in the region to the battlefield! Dust off your joystick , brush up your cheat codes and lets play!',
     rules: [
       'Two games: Call of Duty and FIFA',
-      '[FIFA] 5 minutes per half',
-      '[FIFA] Injuries-on, offside-on',
-      '[FIFA] If the match ends in a tie, proceed to extra time and winner will move on to next round',
-      '[COD] There is no rule except for the team with the maximum number of points is declared the winner and sent to the next round',
+      '[FIFA] Each player plays 5 mins per half',
+      '[FIFA] Both injury and offside goal will be turned on during the play',
+      '[FIFA] If the game ends in a tie, the match goes into extra time and the winner moves on to the next round',
+      '[COD] The team with the maximum number of kills is the winner and moves on to the next round',
     ],
     eventPosterBackground: '../images/non-technical/gaming.jpg',
     eventContact: [
