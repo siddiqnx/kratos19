@@ -209,6 +209,9 @@ h2.hero_right_el {
   margin-top: 20px;
 }
 
+#right_nav.top_bar_right_nav {
+  margin: 0;
+} 
 
 #right_nav li {
   display: inline-block;
