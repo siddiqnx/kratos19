@@ -628,7 +628,7 @@ h2.hero_right_el {
 }
 
 #register_wrapper::after {
-  content: 'Registration will opened soon';
+  content: 'Registration will be opened soon';
   position: absolute;
   top: 0;
   left: 0;
