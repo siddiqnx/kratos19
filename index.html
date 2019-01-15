@@ -247,15 +247,16 @@
     });
 
     (function () {
+    var currentlyOpenedHamburger = -1;
     var hamburger = {
       navToggle: document.querySelectorAll('.nav-toggle'),
       nav: document.querySelectorAll('nav'),
 
       doToggle: function (e, i) {
-        e.preventDefault();
         e.stopPropagation();
         this.navToggle[i].classList.toggle('expanded');
         this.nav[i].classList.toggle('expanded');
+        currentlyOpenedHamburger = this.nav[i].classList.contains('expanded') ? i : -1;
       }
     };
     
@@ -263,9 +264,10 @@
     hamburger.navToggle[1].addEventListener('click', function (e) { hamburger.doToggle(e, 1); });
 
     document.addEventListener('click', function(e) {
-      const navBar = document.querySelector('.nav');
-      if(e.target !== navBar && e.target !== hamburger.navToggle && navBar.classList.contains('expanded') && !hamburger.nav.contains(e.target)) {
-        hamburger.doToggle(e);
+      if(
+        e.target !== hamburger.nav[currentlyOpenedHamburger]
+      ) {
+        hamburger.doToggle(e, currentlyOpenedHamburger);
       }
     });
     }());
