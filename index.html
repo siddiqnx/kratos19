@@ -5,25 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   
+  <meta name="Description" content="Kratos 2k19, Symposium by Computer science and Engineering(CSE) department of Easwari engineering college">
+  <meta property="og:title" content="Kratos 2k19" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.kratos19.com" />
+  <meta property="og:description" content="Kratos 2k19, Symposium by Computer science and Engineering(CSE) department of Easwari engineering college" />
+  <meta property="twitter:card" content="summary"/>
+  <meta name="twitter:site" content="@kratos2k19">
+  <meta name="twitter:title" content="Kratos 19">
+  <meta name="twitter:description" content="Kratos 2k19, Symposium by Computer science and Engineering(CSE) department of Easwari engineering college">
+  <meta name="twitter:creator" content="@kratos2k19">
+  <meta name="twitter:image" content="https://pbs.twimg.com/profile_images/1075460703484403712/kfTPngyy_400x400.jpg">
+
   <link rel="stylesheet" href="css/puregrid.css">
   <link rel="stylesheet" href="css/style.css">
-  
-
-  <script>
-    //Start: Smooth Scroll
-    function smoothScroll() {
-      document.querySelector('#main').scrollIntoView({ 
-        behavior: 'smooth'
-      });
-    }
-    //End: Smooth Scroll
-  </script>
-  
   <title>Kratos 19</title>
 </head>
 <body>
 
-  <!-- <div id="top_bar">
+  <div id="top_bar" style="display:none">
     <div id="top_bar_logo">
       <a href="/index.html">
         <img class="top_bar_logo_img" src="images/kratos_logo.png" alt="Logo">
@@ -54,7 +54,7 @@
         <li><a href="./index.html#register">Register</a></li>
       </ul>
     </nav>
-  </div> -->
+  </div>
 
   <div id="hero">
     <div id="hero_left">
@@ -198,43 +198,62 @@
   </div>
 
   <script>
-
-    // Countdown Timer
-    function prezero(n){
-      return n > 9 ? "" + n: "0" + n;
+    //Start: Smooth Scroll
+    function smoothScroll() {
+      document.querySelector('#main').scrollIntoView({ 
+        behavior: 'smooth'
+      });
     }
+    //End: Smooth Scroll
+
     var deadline = new Date("Feb 13, 2019 15:37:25").getTime(); 
     var x = setInterval(function() { 
-      var now = new Date().getTime(); 
-      var t = deadline - now; 
-      var days = prezero(Math.floor(t / (1000 * 60 * 60 * 24)));
-      var hours = prezero(Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))); 
-      var minutes = prezero(Math.floor((t % (1000 * 60 * 60)) / (1000 * 60))); 
-      var seconds = prezero(Math.floor((t % (1000 * 60)) / 1000));
-      document.getElementById("countdown").innerHTML = '<span class="countdown_item"><span class="countdown_num">' + days + '</span><span class="countdown_unit"> Days </span></span>'  
-      + '<span class="countdown_item"><span class="countdown_num">' + hours + '</span><span class="countdown_unit"> Hours </span></span>' + '<span class="countdown_item"><span class="countdown_num">' + minutes + '</span><span class="countdown_unit"> Minutes </span></span>' + '<span class="countdown_item"><span class="countdown_num">' + seconds + '</span><span class="countdown_unit"> Seconds </span></span>'; 
-      if (t < 0) { 
-          clearInterval(x); 
-          document.getElementById("countdown").innerHTML = "Event Started!"; 
-      } 
+    var now = new Date().getTime(); 
+    var t = deadline - now; 
+    var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
+    var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); 
+    var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
+    var seconds = Math.floor((t % (1000 * 60)) / 1000); 
+    document.getElementById("countdown").innerHTML = days + "D "  
+    + hours + "H " + minutes + "M " + seconds + "S"; 
+        if (t < 0) { 
+            clearInterval(x); 
+            document.getElementById("countdown").innerHTML = "Event Started!"; 
+        } 
     }, 1000);
     
-    //Hamburger
+    function checkVisible(elm) {
+      var rect = elm.getBoundingClientRect();
+      var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+      return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+    }
+
+    window.addEventListener('scroll', function(e) {
+      const heroLeft = document.querySelector("#hero_left .nav-toggle");
+      const navRight = document.querySelector("#hero_right #right_nav");
+      if(!checkVisible(heroLeft) || !checkVisible(navRight)) {
+        document.getElementById('top_bar').style.display = "block";
+      } else {
+        document.getElementById('top_bar').style.display = "none";
+      }
+    });
+
     (function () {
     var hamburger = {
-      navToggle: document.querySelector('.nav-toggle'),
-      nav: document.querySelector('nav'),
+      navToggle: document.querySelectorAll('.nav-toggle'),
+      nav: document.querySelectorAll('nav'),
 
-      doToggle: function (e) {
+      doToggle: function (e, i) {
         e.preventDefault();
         e.stopPropagation();
-        console.log('Hello');
-        this.navToggle.classList.toggle('expanded');
-        this.nav.classList.toggle('expanded');
+        this.navToggle[i].classList.toggle('expanded');
+        this.nav[i].classList.toggle('expanded');
       }
     };
     
-    hamburger.navToggle.addEventListener('click', function (e) { hamburger.doToggle(e); });
+    hamburger.navToggle[0].addEventListener('click', function (e) { hamburger.doToggle(e, 0); });
+    hamburger.navToggle[1].addEventListener('click', function (e) { hamburger.doToggle(e, 1); });
+
     document.addEventListener('click', function(e) {
       const navBar = document.querySelector('.nav');
       if(e.target !== navBar && e.target !== hamburger.navToggle && navBar.classList.contains('expanded') && !hamburger.nav.contains(e.target)) {
