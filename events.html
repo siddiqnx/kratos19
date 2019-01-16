@@ -300,7 +300,22 @@
     </div>
   </div>
     
-    <script>
+  <script>
+
+    var height = 0;
+    var eventItemContent = document.querySelectorAll('.events_item_content');
+    
+    eventItemContent.forEach(function(item) {
+      var num = parseInt(window.getComputedStyle(item).getPropertyValue('height'));
+      if(num > height) {
+        height = num;
+      }
+    });
+
+    eventItemContent.forEach(function(item) {
+      item.style.height = height + 'px';
+    });
+
     (function () {
     var currentlyOpenedHamburger = -1;
     var hamburger = {
@@ -314,7 +329,7 @@
         currentlyOpenedHamburger = this.nav[i].classList.contains('expanded') ? i : -1;
       }
     };
-    
+
     hamburger.navToggle[0].addEventListener('click', function (e) { hamburger.doToggle(e, 0); });
     hamburger.navToggle[1].addEventListener('click', function (e) { hamburger.doToggle(e, 1); });
 
@@ -326,26 +341,12 @@
       }
     });
     }());
-    
-    var height = 0;
-    var eventItemContent = document.querySelectorAll('.events_item_content');
 
-    eventItemContent.forEach(function(item) {
-      var num = parseInt(window.getComputedStyle(item).getPropertyValue('height'));
-      if(num > height) {
-        height = num;
-      }
-    });
-
-    eventItemContent.forEach(function(item) {
-      item.style.height = height + 'px';
-    });
-
-    </script>
-    <script src="js/app.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script>
-      new WOW().init();
-    </script>
+  </script>
+  <script src="js/app.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
 </body>
 </html>

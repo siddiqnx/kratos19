@@ -133,11 +133,10 @@ var events = [
     time: '10.00 AM',
     description: 'There’s murder and mystery in the air, innocent blood has been spilled and fear hath gripped the heart of the college-men. So hurry up, young detectives, Grab your Belsatffs and polish those magnifying glasses and harness your mind palaces, this case is about to take you for a spin. “The game, dear Detective, is on!”',
     rules: [
-      'Number of participants: 1-3',
-      'Round 1: Round one is a paper-pen round where a question paper will be given which will comprise of a murder scene or in general a mystery themed scene, your duty as detectives would be to provide suitable solutions or in other words provide a suitable theory within a restricted time span [Elimination Round]',
+      'Each Team can contain a minimum of one person to a maximum of 3',
+      '<>Round 1: Pen and Paper round comprising of mystery themed puzzles [Elimination round]',
       'The theories provided will be evaluated and the most suitable ones will get shortlisted for the next round',
-      'Round 2: The shortlisted candidates will then be provided another situation where he or she will be required to get practically involved (treasure hunt). Clues will be provided initially and the candidates are required to proceed further with each clue they find and finally come to a conclusion. The conclusion provided will be further evaluated',
-      'The team which finds the clues and cracks the situation in a shorter time span will be declared as the winner',
+      'Round 2: Solve a case around the campus using a sequence of clues',
     ],
     eventPosterBackground: '../images/non-technical/murder-in-multiplayer.jpg',
     eventContact: [
@@ -151,9 +150,9 @@ var events = [
     time: '10.00 AM',
     description: 'Are you the type that elaborately plans your class bunking escapades, the type that loves heist movies, does the fear of being caught give you the thrills? If yes, then surely this is the prison for you. Race against time and flex those brains and brawns to untangle your way to freedom',
     rules: [
-      'Number of Participants: 3 members per team',
-      'Round 1: Puzzles (Pen and Paper based) | 20 questions | 20 minutes [Elimination Round]',
-      'Round 2: Find 3 keys (Dark Room) | 15-20 minutes',
+      'Each team must comprise of 3 people',
+      'Round 1: Pen and Paper round [Elimination Round]',
+      'Round 2: Break from a dark room prison cell by cracking a series of clues',
     ],
     eventPosterBackground: '../images/non-technical/prison-break.jpg',
     eventContact: [
@@ -166,9 +165,9 @@ var events = [
     time: '10.00 AM',
     description: 'Can you talk the talk? Do you have what it takes to sell a lamp to a genie? Step up, as we shine the light on you, sharpen those wits and polish that silver tongue and pitch your heart out',
     rules: [
-      'Each participant will have to choose from a pile of products randomly',
-      'They have to pitch it to the judges within a minute',
-      'Number of rounds will depend on the number of participants',
+      'Each participant for their own',
+      'The participant will have to choose from randomly from a variety of products and pitch',
+      'Elimination rounds maybe included based on the turnout',
     ],
     eventPosterBackground: '../images/non-technical/pitch-impossible.jpg',
     eventContact: [
@@ -182,9 +181,8 @@ var events = [
     description: 'Delve into your knowledge of the comic-verse, let the minds of the DC and the Marvel fanatics unite for the battle against the supreme evil force, The Quizzanator. Just remember, knowledge of the comics should be perfectly balanced, as all things should be.',
     rules: [
       'Each team must comprise of 2 people',
-      'Round 1: Pen and Paper | 20 questions [Elimination round]',
-      'Round 2: Rapid Fire | 10 questions',
-      'Number of Participants: 2 per Team',
+      'Round 1: Pen and Paper [Elimination round]',
+      'Round 2: Rapid fire quiz',
     ],
     eventPosterBackground: '../images/non-technical/comic-quiz.jpg',
     eventContact: [
