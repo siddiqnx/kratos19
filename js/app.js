@@ -134,7 +134,7 @@ var events = [
     description: 'There’s murder and mystery in the air, innocent blood has been spilled and fear hath gripped the heart of the college-men. So hurry up, young detectives, Grab your Belsatffs and polish those magnifying glasses and harness your mind palaces, this case is about to take you for a spin. “The game, dear Detective, is on!”',
     rules: [
       'Each Team can contain a minimum of one person to a maximum of 3',
-      '<>Round 1: Pen and Paper round comprising of mystery themed puzzles [Elimination round]',
+      'Round 1: Pen and Paper round comprising of mystery themed puzzles [Elimination round]',
       'The theories provided will be evaluated and the most suitable ones will get shortlisted for the next round',
       'Round 2: Solve a case around the campus using a sequence of clues',
     ],
