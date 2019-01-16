@@ -1678,6 +1678,7 @@ h2.hero_right_el {
     margin: 15px auto;
     text-align: right;
     flex-direction: row;
+    width: 300px;
   }
 
   .last_event {
