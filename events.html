@@ -80,8 +80,6 @@
     <ul id="event_desc_topics" class="event_desc_width"></ul>
     <h4 class="event_sub_title" class="event_desc_width">Contact</h4>
     <ul id="event_contact" class="event_desc_width">
-      <!-- <span id="event_head_name">Surya Elavazhagan</span>
-      <span id="event_head_phone">+91 9840363615</span> -->
     </ul>
     <div id="event_desc_register" class="event_desc_width">
       <a id="hero_right_register_link" class="event_desc_register_link" href="/#register">REGISTER</a>
@@ -299,54 +297,8 @@
       <span class="wow fadeInUp" id="footer_copyright"><a href="http://srmeaswari.ac.in/">Copyright © | Easwari Engineering College</a></span>
     </div>
   </div>
-    
-  <script>
-
-    var height = 0;
-    var eventItemContent = document.querySelectorAll('.events_item_content');
-    
-    eventItemContent.forEach(function(item) {
-      var num = parseInt(window.getComputedStyle(item).getPropertyValue('height'));
-      if(num > height) {
-        height = num;
-      }
-    });
-
-    eventItemContent.forEach(function(item) {
-      item.style.height = height + 'px';
-    });
-
-    (function () {
-    var currentlyOpenedHamburger = -1;
-    var hamburger = {
-      navToggle: document.querySelectorAll('.nav-toggle'),
-      nav: document.querySelectorAll('nav'),
-
-      doToggle: function (e, i) {
-        e.stopPropagation();
-        this.navToggle[i].classList.toggle('expanded');
-        this.nav[i].classList.toggle('expanded');
-        currentlyOpenedHamburger = this.nav[i].classList.contains('expanded') ? i : -1;
-      }
-    };
-
-    hamburger.navToggle[0].addEventListener('click', function (e) { hamburger.doToggle(e, 0); });
-    hamburger.navToggle[1].addEventListener('click', function (e) { hamburger.doToggle(e, 1); });
-
-    document.addEventListener('click', function(e) {
-      if(
-        e.target !== hamburger.nav[currentlyOpenedHamburger]
-      ) {
-        hamburger.doToggle(e, currentlyOpenedHamburger);
-      }
-    });
-    }());
-
-  </script>
-  <script src="js/app.js"></script>
   <script src="js/wow.min.js"></script>
-  <script>
-    new WOW().init();
-  </script>
+  <script src="js/common.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>

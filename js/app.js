@@ -1,3 +1,17 @@
+var height = 0;
+var eventItemContent = document.querySelectorAll('.events_item_content');
+
+eventItemContent.forEach(function(item) {
+  var num = parseInt(window.getComputedStyle(item).getPropertyValue('height'));
+  if(num > height) {
+    height = num;
+  }
+});
+
+eventItemContent.forEach(function(item) {
+  item.style.height = height + 'px';
+});
+
 let eventItem = document.querySelectorAll('.event_item');
 
 var events = [

@@ -141,21 +141,21 @@
   <div id="register">
     <div id="register_wrapper">
       <h2 class="register_title wow fadeInDown">REGISTER</h2>
-      <form id="register_form" action="#">
+      <form id="register_form">
         <label class="wow fadeInLeft" type="text" for="name">
-          <input type="text" name="user_name" id="name" placeholder="Enter your name" required="">
+          <input type="text" name="user_name" id="name" placeholder="Enter your name" required>
           <span class="label">Name</span>
         </label>
         <label data-wow-delay=".1s" class="wow fadeInLeft" type="text" for="email">
-          <input type="text" name="user_email" id="email" placeholder="Enter your email ID" required="">
+          <input type="text" name="user_email" id="email" placeholder="Enter your email ID" required>
           <span class="label">Email ID</span>
         </label>
         <label data-wow-delay=".2s" class="wow fadeInLeft" type="text" for="phno">
-          <input type="text" name="user_phno" id="phno" placeholder="Enter your phone number" required="">
+          <input type="text" name="user_phno" id="phno" placeholder="Enter your phone number" required>
           <span class="label">Phone Number</span>
         </label>
         <label data-wow-delay=".3s" class="wow fadeInLeft" type="text" for="college">
-          <input type="text" name="user_college" id="college" placeholder="Enter your college" required="">
+          <input type="text" name="user_college" id="college" placeholder="Enter your college" required>
           <span class="label">College</span>
         </label>
         <input data-wow-delay=".4s" class="wow fadeInUp" type="submit" value="Register">
@@ -211,80 +211,15 @@
       <span class="wow fadeInUp" id="footer_copyright"><a href="http://srmeaswari.ac.in/">Copyright © | Easwari Engineering College</a></span>
     </div>
   </div>
-
-  <script>
-    //Start: Smooth Scroll
-    function smoothScroll() {
-      document.querySelector('#main').scrollIntoView({ 
-        behavior: 'smooth'
-      });
-    }
-    //End: Smooth Scroll
-
-    function prezero(n){
-      return n > 9 ? "" + n: "0" + n;
-    }
-    var deadline = new Date("Feb 13, 2019 15:37:25").getTime(); 
-    var x = setInterval(function() { 
-      var now = new Date().getTime(); 
-      var t = deadline - now; 
-      var days = prezero(Math.floor(t / (1000 * 60 * 60 * 24)));
-      var hours = prezero(Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))); 
-      var minutes = prezero(Math.floor((t % (1000 * 60 * 60)) / (1000 * 60))); 
-      var seconds = prezero(Math.floor((t % (1000 * 60)) / 1000));
-      document.getElementById("countdown").innerHTML = '<span class="countdown_item"><span class="countdown_num">' + days + '</span><span class="countdown_unit"> Days </span></span>'  
-      + '<span class="countdown_item"><span class="countdown_num">' + hours + '</span><span class="countdown_unit"> Hours </span></span>' + '<span class="countdown_item"><span class="countdown_num">' + minutes + '</span><span class="countdown_unit"> Minutes </span></span>' + '<span class="countdown_item"><span class="countdown_num">' + seconds + '</span><span class="countdown_unit"> Seconds </span></span>'; 
-      if (t < 0) { 
-          clearInterval(x); 
-          document.getElementById("countdown").innerHTML = "Event Started!"; 
-      } 
-    }, 1000);
-    
-    function checkVisible(elm) {
-      var rect = elm.getBoundingClientRect();
-      var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
-      return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
-    }
-
-    window.addEventListener('scroll', function(e) {
-      const heroLeft = document.querySelector("#hero_left .nav-toggle");
-      const navRight = document.querySelector("#hero_right #right_nav");
-      if(!checkVisible(heroLeft) || !checkVisible(navRight)) {
-        document.getElementById('top_bar').style.transform = "translateY(0)";
-      } else {
-        document.getElementById('top_bar').style.transform = "translateY(-60px)";
-      }
-    });
-
-    (function () {
-    var currentlyOpenedHamburger = -1;
-    var hamburger = {
-      navToggle: document.querySelectorAll('.nav-toggle'),
-      nav: document.querySelectorAll('nav'),
-
-      doToggle: function (e, i) {
-        e.stopPropagation();
-        this.navToggle[i].classList.toggle('expanded');
-        this.nav[i].classList.toggle('expanded');
-        currentlyOpenedHamburger = this.nav[i].classList.contains('expanded') ? i : -1;
-      }
-    };
-    
-    hamburger.navToggle[0].addEventListener('click', function (e) { hamburger.doToggle(e, 0); });
-    hamburger.navToggle[1].addEventListener('click', function (e) { hamburger.doToggle(e, 1); });
-
-    document.addEventListener('click', function(e) {
-      if(
-        e.target !== hamburger.nav[currentlyOpenedHamburger]
-      ) {
-        hamburger.doToggle(e, currentlyOpenedHamburger);
-      }
-    });
-    }());
-  </script>
+  <div id="loading_screen" class="disp_none">
+    <svg class="spinner" storke="white" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+      <circle class="path" stroke="#FFFFFF" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+    </svg>
+    <p>Please wait.....</p>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+  <script src="js/index.js"></script>
   <script src="js/wow.min.js"></script>
-  <script>
-    new WOW().init();
-  </script>
+  <script src="js/common.js"></script>
 </body>
 </html> 

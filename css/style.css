@@ -691,7 +691,7 @@ h2.hero_right_el {
   width: 100%;
 }
 
-#register_wrapper::after {
+/* #register_wrapper::after {
   content: 'Registration will be opened soon';
   position: absolute;
   top: 0;
@@ -706,7 +706,7 @@ h2.hero_right_el {
   text-transform: uppercase;
   padding-top: 310px;
   letter-spacing: 2px;
-}
+} */
 
 #register_form {
   color: white;
@@ -1223,6 +1223,61 @@ h2.hero_right_el {
 
 
 /* End: Online Section */
+
+#loading_screen {
+  background: linear-gradient(60deg, rgba(171, 86, 207, 1), rgba(85,29,252,1), rgba(117,121,255,1));
+  opacity: 0.8;
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.disp_none {
+  display: none;
+}
+
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: rotator 1.4s linear infinite;
+}
+
+#loading_screen > p {
+  position: absolute;
+  color: white;
+  top: 65%;
+  left: 50%;
+}
+
+@keyframes rotator {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(270deg); }
+}
+
+.path {
+  stroke-dasharray: 187;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  animation: dash 1.4s ease-in-out infinite;
+}
+
+@keyframes dash {
+ 0% { stroke-dashoffset: 187; }
+ 50% {
+   stroke-dashoffset: 47;
+   transform:rotate(135deg);
+ }
+ 100% {
+   stroke-dashoffset: 187;
+   transform:rotate(450deg);
+ }
+}
 
 /* Start: Event Description Section */
 
