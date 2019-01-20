@@ -691,23 +691,6 @@ h2.hero_right_el {
   width: 100%;
 }
 
-#register_wrapper::after {
-  content: 'Registration starts from tomorrow';
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  background: rgba(0,0,0,.6);
-  bottom: 0;
-  right: 0;
-  color: white;
-  font-size: 2.5rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding-top: 310px;
-  letter-spacing: 2px;
-}
-
 #register_form {
   color: white;
   display: inline-block;

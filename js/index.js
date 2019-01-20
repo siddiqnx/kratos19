@@ -1,4 +1,3 @@
-var firebaseKey = "AIzaSyDW-eJbSyibAc4j-z0wtWZDfZYZTKOqbD0";
 // Initialize Firebase
 var config = {
   apiKey: process.env.FIREBASE_API_KEY,
