@@ -691,7 +691,7 @@ h2.hero_right_el {
   width: 100%;
 }
 
-/* #register_wrapper::after {
+#register_wrapper::after {
   content: 'Registration will be opened soon';
   position: absolute;
   top: 0;
@@ -706,7 +706,7 @@ h2.hero_right_el {
   text-transform: uppercase;
   padding-top: 310px;
   letter-spacing: 2px;
-} */
+}
 
 #register_form {
   color: white;
