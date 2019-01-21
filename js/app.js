@@ -285,14 +285,13 @@ var events = [
     time: '10.00 AM',
     description: '“For the OCD - Obsessive Cinema Disorder”',
     rules: [
-      'After the credit slide kindly add a slide mentioning “Submitted for Kratos2k19”',
-      'Films should be sent to our official Kratos Facebook page or Instagram page',
+      'Films should be posted in YouTube and a short film poster mentioning "Submitted for Kratos2k19" and a screenshot of your posted video along with its link should be sent to our official Kratos Facebook page or Instagram page',
       'Last date to submit your work is 10th February, 2019',
-      'A participant/team can send only one short film',
-      'The Short film should be the participant’s own creation ',
+      'Multiple entries from the same participant is allowed!',
+      'The short film should be the participant\'s own creation',
       'Winners will be announced on the 13th February, 2019',
       'Core content, acting, cinematography skills and the efficiency of rendering will all be considered while scoring',
-      'The winners will be judged based on our critics’ decision and the reach in social media. (no of likes, comments, shares, in both instagram and facebook)',
+      'The winners will be judged based on our critics’ decision and the reach in social media (no of likes, comments, and shares) - Maximum points goes to critic\'s decision in this event and minimum to Social Media Reach',
     ],
     eventPosterBackground: '../images/online/lights-camera-action.jpg',
     eventContact: [
