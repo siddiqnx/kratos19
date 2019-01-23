@@ -292,6 +292,7 @@ var events = [
       'Winners will be announced on the 13th February, 2019',
       'Core content, acting, cinematography skills and the efficiency of rendering will all be considered while scoring',
       'The winners will be judged based on our critics’ decision and the reach in social media (no of likes, comments, and shares) - Maximum points goes to critic\'s decision in this event and minimum to Social Media Reach',
+      'Time Limit: 15 minutes'
     ],
     eventPosterBackground: '../images/online/lights-camera-action.jpg',
     eventContact: [
