@@ -56,13 +56,13 @@
     </div>
     <nav class="nav">
       <ul>
-        <li><a href="./">Home</a></li>
-        <li><a href="./#main">About Us</a></li>
-        <li><a href="./events.html">Events</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#main">About Us</a></li>
+        <li><a href="/events.html">Events</a></li>
         <!-- <li><a href="./#sponsors">Sponsors</a></li> -->
         <li><a href="#footer_contact">Contact Us</a></li>
-        <li><a href="./#gmap">Map</a></li>
-        <li><a href="./#register">Register</a></li>
+        <li><a href="/#gmap">Map</a></li>
+        <li><a href="/#register">Register</a></li>
       </ul>
     </nav>
   </div>
@@ -297,6 +297,17 @@
       <span class="wow fadeInUp" id="footer_copyright"><a href="http://srmeaswari.ac.in/">Copyright © | Easwari Engineering College</a></span>
     </div>
   </div>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+      });
+    });
+  </script>
   <script src="js/app.js"></script>
   <script src="js/common.js"></script>
 </body>

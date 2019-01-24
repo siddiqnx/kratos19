@@ -25,7 +25,6 @@ var events = [
       'A maximum size of 3 members is allowed per team.',
       'Each team will get 8 mins for the presentation followed by 2 mins of Q&A session',
       'Selected candidates should bring a hard copy of their paper and a loaded pendrive with PPT slides (maximum 12 slides)',
-      'Papers can be submitted directly through our Website',
       'The work must be original. Plagiarism will be monitored seriously',
       'Papers should adhere to Standard two-column IEEE Format',
       'Deadline for Submitting your papers is 5th February 2019. Papers sent after this will not be considered for evaluation',

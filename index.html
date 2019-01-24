@@ -50,10 +50,10 @@
     <div id="top_bar_nav">
       <ul id="right_nav" class="top_bar_right_nav">
         <li class="nav_item"><a href="/events.html">Events</a></li>
-        <li class="nav_item"><a href="/#main">About Us</a></li>
+        <li class="nav_item"><a href="#main">About Us</a></li>
         <!-- <li class="nav_item"><a href="/#sponsors">Sponsors</a></li> -->
-        <li class="nav_item"><a href="#">Contact Us</a></li>
-        <li class="nav_item"><a href="/#gmap">Map</a></li>
+        <li class="nav_item"><a href="#footer_contact">Contact Us</a></li>
+        <li class="nav_item"><a href="#gmap">Map</a></li>
       </ul>
     </div>
     <div class="nav-toggle">
@@ -61,13 +61,13 @@
     </div>
     <nav class="nav">
       <ul>
-        <li><a href="./">Home</a></li>
-        <li><a href="./#main">About Us</a></li>
-        <li><a href="./events.html">Events</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="#main">About Us</a></li>
+        <li><a href="/events.html">Events</a></li>
         <!-- <li><a href="./#sponsors">Sponsors</a></li> -->
         <li><a href="#footer_contact">Contact Us</a></li>
-        <li><a href="./#gmap">Map</a></li>
-        <li><a href="./#register">Register</a></li>
+        <li><a href="#gmap">Map</a></li>
+        <li><a href="#register">Register</a></li>
       </ul>
     </nav>
   </div>
@@ -96,17 +96,17 @@
     <div id="hero_right">
       <ul id="right_nav">
           <li class="nav_item wow fadeInDown"><a href="/events.html">Events</a></li>
-          <li data-wow-delay=".1s" class="nav_item wow fadeInDown"><a href="/#main">About Us</a></li>
-          <!-- <li class="nav_item"><a href="/#sponsors">Sponsors</a></li> -->
+          <li data-wow-delay=".1s" class="nav_item wow fadeInDown"><a href="#main">About Us</a></li>
+          <!-- <li class="nav_item"><a href="#sponsors">Sponsors</a></li> -->
           <li data-wow-delay=".2s"" class="nav_item wow fadeInDown"><a href="#footer_contact">Contact Us</a></li>
-          <li data-wow-delay=".3s" class="nav_item wow fadeInDown"><a href="/#gmap">Map</a></li>
+          <li data-wow-delay=".3s" class="nav_item wow fadeInDown"><a href="#gmap">Map</a></li>
       </ul>
       <div id="hero_right_wrapper">
         <div id="countdown"><span class="countdown_item"><span class="countdown_num">00</span><span class="countdown_unit"> Days </span></span><span class="countdown_item"><span class="countdown_num">00</span><span class="countdown_unit"> Hours </span></span><span class="countdown_item"><span class="countdown_num">00</span><span class="countdown_unit"> Minutes </span></span><span class="countdown_item"><span class="countdown_num">00</span><span class="countdown_unit"> Seconds </span></span>
         </div> 
         <h1 id="hero_right_title" class="animated fadeInRight">KRATOS 19</h1>
         <div id="hero_right_register">
-          <a id="hero_right_register_link" class="animated jackInTheBox delay-1s" href="/#register">REGISTER</a>
+          <a id="hero_right_register_link" class="animated jackInTheBox delay-1s" href="#register">REGISTER</a>
         </div>
         <div id="hero_right_subtitle" class="animated fadeInUp">
           <p id="hero_right_p" class="hero_right_el">Symposium by</p>
@@ -211,14 +211,26 @@
       <span class="wow fadeInUp" id="footer_copyright"><a href="http://srmeaswari.ac.in/">Copyright © | Easwari Engineering College</a></span>
     </div>
   </div>
+
   <div id="loading_screen" class="disp_none">
     <svg class="spinner" storke="white" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
       <circle class="path" stroke="#FFFFFF" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
     </svg>
     <p>Please wait...</p>
   </div>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+      });
+    });
+  </script>
   <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
   <script src="js/index.js"></script>
   <script src="js/common.js"></script>
+
 </body>
 </html> 
