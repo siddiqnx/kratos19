@@ -28,8 +28,8 @@ var events = [
       'Papers can be submitted directly through our Website',
       'The work must be original. Plagiarism will be monitored seriously',
       'Papers should adhere to Standard two-column IEEE Format',
-      'Papers can be submitted directly through our Website',
       'Deadline for Submitting your papers is 5th February 2019. Papers sent after this will not be considered for evaluation',
+      'Papers should be submitted to papers@kratos19.com',
     ],
     topics: [
       'Emerging Trends in Computer science',
