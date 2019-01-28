@@ -266,7 +266,7 @@ var events = [
       'Theme for the photography contest is “Colors of Life”',
       'Photographs should be sent to our official Kratos Facebook page or Instagram page',
       'Last date to submit your photographs is 10th February, 2019',
-      'A participant can send only one photograph',
+      'A participant can send upto 3 photographs',
       'The photograph should be the participant’s own creation',
       'Plagiarised pictures will be monitored seriously and will be disqualified without notification',
       'Winners will be announced on the 13th February, 2019',
@@ -358,7 +358,7 @@ for(var i = 0; i < eventItem.length; i++) {
         });
         eventTopics.style.display = "block";
         eventTopicHeading.style.display = "block";
-        document.getElementsByClassName('event_sub_title_p')[0].style.display = "block";
+        document.getElementsB1yClassName('event_sub_title_p')[0].style.display = "block";
       } else {
         var eventTopics = document.getElementById('event_desc_topics');
         var eventTopicHeading = document.getElementById('event_topics_heading');
