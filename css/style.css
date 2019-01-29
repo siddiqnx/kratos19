@@ -712,7 +712,7 @@ h2.hero_right_el {
   width: 150px;
 }
 
-#register_form  input[type="text"] {
+#register_form  input[type="text"], #register_form select {
   display: block;
   width: 300px;
   height: 50px;
@@ -728,13 +728,14 @@ h2.hero_right_el {
   transition: background .2s;
   outline: none;
   border: none;
+  letter-spacing: 1px;
 }
 
 #register_form input[type="text"]:focus {
   background: rgb(71, 22, 218);
 }
 
-#register_form input[type="text"]:focus ~ .label,#register_form input[type="text"]:valid ~ .label {
+#register_form input[type="text"]:focus ~ .label, #register_form input[type="text"]:valid ~ .label, #register_form select:focus ~ .label, #register_form select:valid ~ .label {
   -webkit-transform: translateY(-40px) translateX(-20px) scale(.8);
           transform: translateY(-40px) translateX(-20px) scale(.8);
 }
