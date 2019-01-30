@@ -814,6 +814,168 @@ h2.hero_right_el {
 
 /* End: Sponsors Section*/
 
+/* Start: Workshop Section */
+
+#workshop {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#workshop_wrapper {
+  display: flex;
+  position: relative;
+  width: 90%;
+  border: 2px solid #551DFC;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  padding: 100px 50px;
+  margin-top: 115px;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1px;
+  max-width: 1000px;
+}
+
+#workshop_wrapper h2, #workshop_wrapper .enroll {
+  position: absolute;
+}
+
+#workshop_wrapper h2 {
+  margin: 0;
+  top: -25px;
+  background: white;
+  padding: 0 20px;
+  line-height: 1;
+  left: 50%;
+}
+
+.workshop_title {
+  text-align: center;
+  margin: 60px 0 40px;   
+  font-size: 3rem;
+  color: #551DFC;
+  /* text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15); */
+}
+
+#workshop_left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#workshop_left_logo {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #551DFC;
+}
+
+#workshop_left_logo img {
+  width: 200px;
+}
+
+#workshop_left_fb {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+}
+
+#workshop_left_fb img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.workshop_border {
+  width: 1px;
+  height: 150px;
+  background-color: #551DFC;
+  margin: 0 50px;
+  transform: rotateZ(10deg);
+}
+
+#workshop_right_ul {
+  list-style-type: none;
+}
+
+#workshop_right_ul li {
+  border-bottom: 1px solid #551DFC;
+}
+
+#workshop_right_ul li:last-of-type {
+  border: none;
+}
+
+#workshop_right_ul li a {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgb(171, 86, 207)), color-stop(rgb(85,29,252)), to(rgb(117,121,255)));
+  background: linear-gradient(90deg, rgb(171, 86, 207), rgb(85,29,252), rgb(117,121,255));
+          background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  padding: 10px 0;
+  display: block;
+  transition: transform .2s ease-in-out;
+}
+
+#workshop_right_ul li a:hover {
+  transform: translateX(5px);
+}
+
+#workshop_buttons {
+  position: absolute;
+  letter-spacing: 1px;
+  bottom: -35px;
+  display: flex;
+  background: white;
+  padding: 10px;
+  text-align: center;
+}
+
+#workshop_buttons a {
+  display: block;
+	padding: 10px 20px;
+	font-size: 1.5rem;
+  border-radius: 15px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  -webkit-box-shadow: 0px 4px 20px -5px rgba(0,0,0,0.6);
+          box-shadow: 0px 4px 20px -5px rgba(0,0,0,0.6);
+  -webkit-transition: -webkit-transform .2s ease-in-out, -webkit-box-shadow .2s ease-in-out;
+  transition: -webkit-transform .2s ease-in-out, -webkit-box-shadow .2s ease-in-out;
+  transition: transform .2s ease-in-out, box-shadow .2s ease-in-out;
+  transition: transform .2s ease-in-out, box-shadow .2s ease-in-out, -webkit-transform .2s ease-in-out, -webkit-box-shadow .2s ease-in-out;
+  font-size: 1rem;
+}
+
+#workshop_buttons a:nth-child(1) {
+  background: white;
+  border: 2px solid rgb(85,29,252);
+  border-radius: 15px;
+  color: rgb(85,29,252);
+  margin-right: 20px;
+}
+
+#workshop_buttons a:nth-child(2) {
+  background: linear-gradient(60deg, rgb(142, 16, 214), rgb(85,29,252),  rgb(117,121,255));
+  color: white;
+}
+
+#workshop_buttons a:hover {
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+  -webkit-box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.6);
+          box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.6)
+}
+
+/* End: Workshop Section */
+
 /*  Start: Map Section */
 
 #gmap {
@@ -1565,6 +1727,7 @@ h2.hero_right_el {
   position: absolute;
   bottom: 5px;
   font-size: .7rem;
+  text-align: center;
 }
 
 /* End: Footer Section */
@@ -1710,6 +1873,28 @@ h2.hero_right_el {
     height: 2px;
   }
 
+  #workshop_wrapper {
+    flex-direction: column;
+  }
+
+  #workshop_left_logo {
+    border: none;
+  }
+
+  #workshop_left_fb {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+  }
+
+  .workshop_border {
+    display: none;
+  }
+
+  #workshop_right {
+    margin: 20px 0 50px;
+  }
+
   .event_item {
     height: 110px;
     margin: 15px auto;
@@ -1800,6 +1985,10 @@ h2.hero_right_el {
   #main_wrapper {
     width: 100%;
     border-radius: 0;
+  }
+
+  #workshop_buttons {
+    bottom: -50px;
   }
 
   #event_description {
