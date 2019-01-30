@@ -830,6 +830,8 @@ h2.hero_right_el {
 }
 
 #workshop_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
   width: 90%;
@@ -838,8 +840,12 @@ h2.hero_right_el {
   margin-bottom: 100px;
   padding: 100px 50px;
   margin-top: 115px;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   letter-spacing: 1px;
   max-width: 1000px;
 }
@@ -866,9 +872,16 @@ h2.hero_right_el {
 }
 
 #workshop_left {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #workshop_left_logo {
@@ -882,9 +895,15 @@ h2.hero_right_el {
 
 #workshop_left_fb {
   padding-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-style: italic;
 }
 
@@ -898,7 +917,8 @@ h2.hero_right_el {
   height: 150px;
   background-color: #551DFC;
   margin: 0 50px;
-  transform: rotateZ(10deg);
+  -webkit-transform: rotateZ(10deg);
+          transform: rotateZ(10deg);
 }
 
 #workshop_right_ul {
@@ -914,24 +934,30 @@ h2.hero_right_el {
 }
 
 #workshop_right_ul li a {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgb(171, 86, 207)), color-stop(rgb(85,29,252)), to(rgb(117,121,255)));
+  background: -webkit-gradient(linear, left top, right top, from(rgb(171, 86, 207)), color-stop(rgb(85,29,252)), to(rgb(117,121,255)));
   background: linear-gradient(90deg, rgb(171, 86, 207), rgb(85,29,252), rgb(117,121,255));
           background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   padding: 10px 0;
   display: block;
+  -webkit-transition: -webkit-transform .2s ease-in-out;
+  transition: -webkit-transform .2s ease-in-out;
   transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
 }
 
 #workshop_right_ul li a:hover {
-  transform: translateX(5px);
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
 }
 
 #workshop_buttons {
   position: absolute;
   letter-spacing: 1px;
   bottom: -35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background: white;
   padding: 10px;
@@ -1389,7 +1415,8 @@ h2.hero_right_el {
   position: absolute;
   top: 50%;
   left: 50%;
-  animation: rotator 1.4s linear infinite;
+  -webkit-animation: rotator 1.4s linear infinite;
+          animation: rotator 1.4s linear infinite;
 }
 
 #loading_screen > p {
@@ -1399,27 +1426,50 @@ h2.hero_right_el {
   left: 50%;
 }
 
+@-webkit-keyframes rotator {
+  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(270deg); transform: rotate(270deg); }
+}
+
 @keyframes rotator {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(270deg); }
+  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(270deg); transform: rotate(270deg); }
 }
 
 .path {
   stroke-dasharray: 187;
   stroke-dashoffset: 0;
-  transform-origin: center;
-  animation: dash 1.4s ease-in-out infinite;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation: dash 1.4s ease-in-out infinite;
+          animation: dash 1.4s ease-in-out infinite;
+}
+
+@-webkit-keyframes dash {
+ 0% { stroke-dashoffset: 187; }
+ 50% {
+   stroke-dashoffset: 47;
+   -webkit-transform:rotate(135deg);
+           transform:rotate(135deg);
+ }
+ 100% {
+   stroke-dashoffset: 187;
+   -webkit-transform:rotate(450deg);
+           transform:rotate(450deg);
+ }
 }
 
 @keyframes dash {
  0% { stroke-dashoffset: 187; }
  50% {
    stroke-dashoffset: 47;
-   transform:rotate(135deg);
+   -webkit-transform:rotate(135deg);
+           transform:rotate(135deg);
  }
  100% {
    stroke-dashoffset: 187;
-   transform:rotate(450deg);
+   -webkit-transform:rotate(450deg);
+           transform:rotate(450deg);
  }
 }
 
@@ -1879,7 +1929,10 @@ h2.hero_right_el {
   }
 
   #workshop_wrapper {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   #workshop_left_logo {
@@ -1904,7 +1957,10 @@ h2.hero_right_el {
     height: 110px;
     margin: 15px auto;
     text-align: right;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     width: 300px;
   }
 
