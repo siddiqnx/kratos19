@@ -475,7 +475,7 @@ h2.hero_right_el {
 
 #top_bar_nav {
   height: 100%;
-  width: 450px;
+  width: 500px;
   float: right;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1749,6 +1749,10 @@ h2.hero_right_el {
 
 @media screen and (max-width:1024px) {
   
+  #top_bar_nav {
+    width: 450px;
+  }
+
   #hero #hero_left .hero_left_menu {
     display: block;
     top: 60px;
@@ -1781,6 +1785,7 @@ h2.hero_right_el {
   #top_bar_nav {
     display: none;
   }
+
   #hero {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
