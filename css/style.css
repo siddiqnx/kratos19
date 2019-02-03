@@ -470,7 +470,7 @@ h2.hero_right_el {
   background: linear-gradient(60deg, rgba(171, 86, 207, 0.8), rgba(85,29,252,0.8), rgba(117,121,255,0.8));
   color: transparent;
   -webkit-background-clip: text;
-          background-clip: text;
+          background-clip: text;  
 }
 
 #top_bar_nav {

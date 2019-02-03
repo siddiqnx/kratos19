@@ -358,7 +358,7 @@ for(var i = 0; i < eventItem.length; i++) {
         });
         eventTopics.style.display = "block";
         eventTopicHeading.style.display = "block";
-        document.getElementsB1yClassName('event_sub_title_p')[0].style.display = "block";
+        document.getElementsByClassName('event_sub_title_p')[0].style.display = "block";
       } else {
         var eventTopics = document.getElementById('event_desc_topics');
         var eventTopicHeading = document.getElementById('event_topics_heading');
