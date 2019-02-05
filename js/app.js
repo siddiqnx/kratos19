@@ -27,7 +27,7 @@ var events = [
       'Selected candidates should bring a hard copy of their paper and a loaded pendrive with PPT slides (maximum 12 slides)',
       'The work must be original. Plagiarism will be monitored seriously',
       'Papers should adhere to Standard two-column IEEE Format',
-      'Deadline for Submitting your papers is 5th February 2019. Papers sent after this will not be considered for evaluation',
+      'Deadline for Submitting your papers is 10th February 2019. Papers sent after this will not be considered for evaluation',
       'Papers should be submitted to papers@kratos19.com',
     ],
     topics: [
