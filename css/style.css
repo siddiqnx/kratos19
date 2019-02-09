@@ -985,12 +985,6 @@ h2.hero_right_el {
   border: 2px solid rgb(85,29,252);
   border-radius: 15px;
   color: rgb(85,29,252);
-  margin-right: 20px;
-}
-
-#workshop_buttons a:nth-child(2) {
-  background: linear-gradient(60deg, rgb(142, 16, 214), rgb(85,29,252),  rgb(117,121,255));
-  color: white;
 }
 
 #workshop_buttons a:hover {
